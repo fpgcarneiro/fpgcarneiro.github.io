@@ -84,6 +84,18 @@ export const experience: ExperienceEntry[] = [
     ],
   },
   {
+    slug: 'willisa-sap-mm',
+    org: 'Willisa Assessoria em Recursos Humanos',
+    role: { pt: 'Consultora SAP MM', en: 'SAP MM Consultant' },
+    location: 'Brasil',
+    start: '2012-11',
+    end: '2013-05',
+    bullets: [
+      { pt: 'Atuação como consultora no módulo SAP MM (Materials Management)', en: 'Worked as a consultant in the SAP MM (Materials Management) module' },
+      { pt: 'Formação em SAP MM', en: 'Trained in SAP MM' },
+    ],
+  },
+  {
     slug: 'centro-paula-souza-araraquara',
     org: 'Centro Estadual de Educação Tecnológica Paula Souza',
     role: { pt: 'Docente de informática', en: 'Computing Lecturer' },
