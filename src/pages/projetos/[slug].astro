@@ -30,6 +30,7 @@ const sections: { heading: string; body: string }[] = [
   project.solution && { heading: 'A solução', body: project.solution.pt },
   project.methodology && { heading: 'Metodologia', body: project.methodology.pt },
   project.architecture && { heading: 'Arquitetura', body: project.architecture.pt },
+  ...(project.extraSections ?? []).map((s) => ({ heading: s.heading.pt, body: s.body.pt })),
 ].filter(Boolean) as { heading: string; body: string }[];
 ---
 

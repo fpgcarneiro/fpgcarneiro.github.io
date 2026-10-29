@@ -18,6 +18,7 @@ export interface ProjectEntry {
   solution?: Bilingual;
   methodology?: Bilingual;
   architecture?: Bilingual;
+  extraSections?: { heading: Bilingual; body: Bilingual }[];
   contribution: Bilingual;
   results?: Bilingual;
   relevance?: Bilingual;
@@ -191,38 +192,64 @@ export const projects: ProjectEntry[] = [
     category: 'venture',
     title: { pt: 'LIA', en: 'LIA' },
     subtitle: {
-      pt: 'Inteligência Artificial para uma vida mais organizada e produtiva.',
-      en: 'Artificial Intelligence for a more organized, productive life.',
+      pt: 'Inteligência que organiza, conecta e transforma oportunidades.',
+      en: 'Intelligence that organizes, connects, and turns opportunities into action.',
     },
     summary: {
-      pt: 'Agente pessoal de IA, projeto autoral de Fernanda, voltado a produtividade e gestão do tempo.',
-      en: 'A personal AI agent, Fernanda’s own project, focused on productivity and time management.',
+      pt: 'Agente pessoal de IA, projeto autoral de Fernanda, para produtividade e para qualificar contatos profissionais.',
+      en: 'A personal AI agent, Fernanda’s own project, for productivity and for qualifying professional contacts.',
     },
     overview: {
-      pt: 'Numa rotina cada vez mais dinâmica, organizar compromissos, administrar prioridades e equilibrar responsabilidades é um desafio constante. A LIA nasce da ideia de usar a Inteligência Artificial como aliada da organização pessoal, ajudando a planejar melhor as atividades, entender prioridades e administrar o tempo de forma mais consciente. É um projeto autoral e independente de Fernanda, sem vínculo com a MaximizaIA, o Mapa de IA ou qualquer outra organização.',
-      en: 'In an increasingly dynamic routine, organizing commitments, managing priorities, and balancing responsibilities is a constant challenge. LIA grew out of the idea of using Artificial Intelligence as an ally for personal organization, helping people plan their activities, understand their priorities, and manage time more consciously. It’s an independent, authorial project of Fernanda’s, with no tie to MaximizaIA, Mapa de IA, or any other organization.',
+      pt: 'A LIA é um projeto autoral de Fernanda, criado para explorar o potencial dos agentes de Inteligência Artificial no apoio à produtividade pessoal, à organização profissional e à gestão de oportunidades. Combina assistência para planejamento e gestão do tempo com interação em linguagem natural para o primeiro atendimento de pessoas que entram em contato em busca de conhecimento, soluções ou serviços.',
+      en: 'LIA is Fernanda’s own project, created to explore what AI agents can do to support personal productivity, professional organization, and opportunity management. It combines assistance for planning and time management with natural-language interaction for the first point of contact with people reaching out for knowledge, solutions, or services.',
     },
     challenge: {
-      pt: 'A maioria das ferramentas tradicionais de produtividade depende de planejamento e atualização manual. Agendas, listas de tarefas e aplicativos de organização ajudam, mas nem sempre interpretam o contexto das atividades, entendem prioridades ou apoiam decisões de planejamento.',
-      en: 'Most traditional productivity tools depend on manual planning and upkeep. Calendars, to-do lists, and organization apps help, but they don’t always interpret the context of a task, understand priorities, or support planning decisions.',
+      pt: 'Profissionais que acumulam pesquisa, desenvolvimento tecnológico, gestão de projetos e relacionamento com pessoas interessadas enfrentam dificuldade para administrar o tempo e responder de forma organizada a demandas diferentes. A LIA investiga como uma agente inteligente pode servir de interface entre organização pessoal, interação com pessoas e gestão de oportunidades, reduzindo tarefas repetitivas e apoiando decisões.',
+      en: 'Professionals juggling research, technology development, project management, and relationships with interested contacts struggle to manage their time and respond to different demands in an organized way. LIA investigates how an intelligent agent can serve as an interface between personal organization, interacting with people, and managing opportunities, cutting down repetitive tasks and supporting decisions.',
     },
-    solution: {
-      pt: 'A LIA é concebida como uma agente pessoal de IA voltada a apoiar a organização de tarefas e compromissos, o planejamento diário e semanal, a gestão de prioridades, o apoio a decisões sobre distribuição do tempo, o acompanhamento de objetivos, e a interação em linguagem natural. Essas são as direções e possibilidades do projeto, não funcionalidades já implementadas.',
-      en: 'LIA is conceived as a personal AI agent to support task and commitment organization, daily and weekly planning, priority management, decisions about time allocation, goal tracking, and natural-language interaction. These are the project’s goals and possibilities, not features already implemented.',
-    },
+    extraSections: [
+      {
+        heading: { pt: 'Frente 1 — Produtividade e gestão do tempo', en: 'Front 1 — Productivity and time management' },
+        body: {
+          pt: 'Apoio à organização de compromissos e atividades, planejamento diário e semanal, gestão de prioridades, acompanhamento de objetivos e interação em linguagem natural para facilitar o planejamento da rotina.',
+          en: 'Support for organizing commitments and activities, daily and weekly planning, priority management, goal tracking, and natural-language interaction to make routine planning easier.',
+        },
+      },
+      {
+        heading: { pt: 'Frente 2 — Relacionamento e qualificação de oportunidades', en: 'Front 2 — Relationship and opportunity qualification' },
+        body: {
+          pt: 'A LIA também foi concebida para o primeiro atendimento de pessoas que entram em contato profissionalmente com Fernanda: compreender a demanda, identificar o contexto e fazer uma triagem inicial, apontando se há oportunidade de consultoria, formação, serviços tecnológicos, desenvolvimento de software ou projetos de IA. O objetivo não é vender de forma indiscriminada, mas entender a necessidade de cada pessoa e encaminhar melhor. Isso é qualificação de contatos recebidos, diferente de prospecção ativa: a LIA não busca novos clientes por conta própria.',
+          en: 'LIA was also conceived to handle the first contact with people who reach out to Fernanda professionally: understanding the request, identifying the context, and doing an initial triage, flagging whether there is an opportunity for consulting, training, technology services, software development, or AI projects. The goal isn’t to sell indiscriminately, but to understand each person’s need and route it better. This is qualifying inbound contacts, not active prospecting: LIA doesn’t search for new clients on its own.',
+        },
+      },
+      {
+        heading: { pt: 'Arquitetura conceitual', en: 'Conceptual architecture' },
+        body: {
+          pt: 'Dois módulos ligados a um núcleo de agente inteligente: produtividade e organização; relacionamento e oportunidades. Na frente de relacionamento, o fluxo conceitual é: contato recebido → compreensão da necessidade → triagem e qualificação → identificação de oportunidades → encaminhamento para avaliação humana. Esse fluxo descreve a proposta conceitual do projeto, não uma arquitetura técnica já implementada e confirmada em detalhe.',
+          en: 'Two modules connected to an intelligent-agent core: productivity and organization; relationship and opportunities. On the relationship front, the conceptual flow is: contact received → understanding the need → triage and qualification → identifying opportunities → routing to human review. This flow describes the project’s conceptual proposal, not a technical architecture already implemented and confirmed in detail.',
+        },
+      },
+      {
+        heading: { pt: 'Princípios', en: 'Principles' },
+        body: {
+          pt: 'Tecnologia centrada nas pessoas, orientada à utilidade prática, à autonomia do usuário e ao uso responsável de IA. Na qualificação de contatos, isso inclui transparência sobre o uso de IA na interação, proteção e minimização dos dados pessoais coletados, e supervisão humana no encaminhamento final.',
+          en: 'Technology centered on people, oriented toward practical usefulness, user autonomy, and the responsible use of AI. In qualifying contacts, that means transparency about AI being used in the interaction, protecting and minimizing the personal data collected, and human oversight over the final routing.',
+        },
+      },
+    ],
     contribution: {
-      pt: 'Idealização e concepção do projeto, conectada à experiência de Fernanda em Inteligência Artificial, arquitetura de sistemas inteligentes e desenvolvimento de soluções tecnológicas.',
-      en: 'Ideation and design of the project, connected to Fernanda’s experience in Artificial Intelligence, intelligent systems architecture, and technology development.',
+      pt: 'Idealização e concepção do projeto, conectada à experiência de Fernanda em Inteligência Artificial, agentes inteligentes, processamento de linguagem natural, arquitetura de software e automação de processos.',
+      en: 'Ideation and design of the project, connected to Fernanda’s experience in Artificial Intelligence, intelligent agents, natural language processing, software architecture, and process automation.',
     },
     relevance: {
-      pt: 'Representa o interesse de Fernanda em explorar agentes de IA para além dos ambientes corporativos, aplicados também a necessidades individuais: uma IA centrada nas pessoas, na utilidade prática e na autonomia do usuário.',
-      en: 'Reflects Fernanda’s interest in exploring AI agents beyond corporate environments, applied to individual needs as well: AI centered on people, practical usefulness, and user autonomy.',
+      pt: 'Representa o interesse de Fernanda em explorar agentes de IA para além dos ambientes corporativos, aplicados também a necessidades individuais e ao relacionamento profissional: uma IA centrada nas pessoas e na utilidade prática.',
+      en: 'Reflects Fernanda’s interest in exploring AI agents beyond corporate environments, applied to individual needs and professional relationships as well: AI centered on people and practical usefulness.',
     },
     caution: {
-      pt: 'Projeto em estágio inicial de desenvolvimento. As possibilidades descritas são objetivos do projeto, não funcionalidades disponíveis publicamente.',
-      en: 'Project in an early stage of development. The possibilities described are the project’s goals, not publicly available features.',
+      pt: 'Projeto pessoal em desenvolvimento. As funcionalidades e o fluxo descritos são a proposta e os objetivos do projeto, não funcionalidades já implementadas, disponíveis publicamente ou confirmadas em detalhe técnico.',
+      en: 'A personal project in development. The features and flow described are the project’s proposal and goals, not features already implemented, publicly available, or confirmed in technical detail.',
     },
-    tech: ['Agentes de IA'],
+    tech: ['Agentes de IA', 'Processamento de linguagem natural'],
   },
   {
     slug: 'mapa-de-ia',
