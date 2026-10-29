@@ -187,6 +187,44 @@ export const projects: ProjectEntry[] = [
 
   // ───────────────────────── VENTURES ─────────────────────────
   {
+    slug: 'lia',
+    category: 'venture',
+    title: { pt: 'LIA', en: 'LIA' },
+    subtitle: {
+      pt: 'Inteligência Artificial para uma vida mais organizada e produtiva.',
+      en: 'Artificial Intelligence for a more organized, productive life.',
+    },
+    summary: {
+      pt: 'Agente pessoal de IA, projeto autoral de Fernanda, voltado a produtividade e gestão do tempo.',
+      en: 'A personal AI agent, Fernanda’s own project, focused on productivity and time management.',
+    },
+    overview: {
+      pt: 'Numa rotina cada vez mais dinâmica, organizar compromissos, administrar prioridades e equilibrar responsabilidades é um desafio constante. A LIA nasce da ideia de usar a Inteligência Artificial como aliada da organização pessoal, ajudando a planejar melhor as atividades, entender prioridades e administrar o tempo de forma mais consciente. É um projeto autoral e independente de Fernanda, sem vínculo com a MaximizaIA, o Mapa de IA ou qualquer outra organização.',
+      en: 'In an increasingly dynamic routine, organizing commitments, managing priorities, and balancing responsibilities is a constant challenge. LIA grew out of the idea of using Artificial Intelligence as an ally for personal organization, helping people plan their activities, understand their priorities, and manage time more consciously. It’s an independent, authorial project of Fernanda’s, with no tie to MaximizaIA, Mapa de IA, or any other organization.',
+    },
+    challenge: {
+      pt: 'A maioria das ferramentas tradicionais de produtividade depende de planejamento e atualização manual. Agendas, listas de tarefas e aplicativos de organização ajudam, mas nem sempre interpretam o contexto das atividades, entendem prioridades ou apoiam decisões de planejamento.',
+      en: 'Most traditional productivity tools depend on manual planning and upkeep. Calendars, to-do lists, and organization apps help, but they don’t always interpret the context of a task, understand priorities, or support planning decisions.',
+    },
+    solution: {
+      pt: 'A LIA é concebida como uma agente pessoal de IA voltada a apoiar a organização de tarefas e compromissos, o planejamento diário e semanal, a gestão de prioridades, o apoio a decisões sobre distribuição do tempo, o acompanhamento de objetivos, e a interação em linguagem natural. Essas são as direções e possibilidades do projeto, não funcionalidades já implementadas.',
+      en: 'LIA is conceived as a personal AI agent to support task and commitment organization, daily and weekly planning, priority management, decisions about time allocation, goal tracking, and natural-language interaction. These are the project’s goals and possibilities, not features already implemented.',
+    },
+    contribution: {
+      pt: 'Idealização e concepção do projeto, conectada à experiência de Fernanda em Inteligência Artificial, arquitetura de sistemas inteligentes e desenvolvimento de soluções tecnológicas.',
+      en: 'Ideation and design of the project, connected to Fernanda’s experience in Artificial Intelligence, intelligent systems architecture, and technology development.',
+    },
+    relevance: {
+      pt: 'Representa o interesse de Fernanda em explorar agentes de IA para além dos ambientes corporativos, aplicados também a necessidades individuais: uma IA centrada nas pessoas, na utilidade prática e na autonomia do usuário.',
+      en: 'Reflects Fernanda’s interest in exploring AI agents beyond corporate environments, applied to individual needs as well: AI centered on people, practical usefulness, and user autonomy.',
+    },
+    caution: {
+      pt: 'Projeto em estágio inicial de desenvolvimento. As possibilidades descritas são objetivos do projeto, não funcionalidades disponíveis publicamente.',
+      en: 'Project in an early stage of development. The possibilities described are the project’s goals, not publicly available features.',
+    },
+    tech: ['Agentes de IA'],
+  },
+  {
     slug: 'mapa-de-ia',
     category: 'venture',
     title: { pt: 'Mapa de IA', en: 'Mapa de IA' },

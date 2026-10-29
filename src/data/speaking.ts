@@ -22,11 +22,10 @@ export const speaking: SpeakingEntry[] = [
     date: '2026-10-20/23',
     location: 'São Paulo, SP, Brasil',
     description: {
-      pt: 'Apresentação dos resultados do SmartProd no XLVI ENEGEP: um algoritmo genético otimizou o plano de produção, reduzindo em 57% o tempo total de setup e eliminando atrasos, com a MIA (IA generativa) traduzindo a solicitação em linguagem natural e explicando os resultados ao usuário.',
-      en: 'Presentation of the SmartProd results at the XLVI ENEGEP: a genetic algorithm optimized the production plan, cutting total setup time by 57% and eliminating delays, with MIA (generative AI) translating the natural-language request and explaining the results to the user.',
+      pt: 'Apresentação dos resultados do SmartProd no XLVI ENEGEP: um algoritmo genético otimizou o plano de produção, reduzindo em 57% o tempo total de setup e eliminando atrasos, com a MIA (Maximiza Inteligência Artificial) traduzindo a solicitação em linguagem natural e explicando os resultados ao usuário.',
+      en: 'Presentation of the SmartProd results at the XLVI ENEGEP: a genetic algorithm optimized the production plan, cutting total setup time by 57% and eliminating delays, with MIA (Maximiza Inteligência Artificial) translating the natural-language request and explaining the results to the user.',
     },
     image: 'fernanda-speaking-enegep-2026.jpg',
-    link: 'https://portal.abepro.org.br/enegep/2026/',
   },
   {
     slug: 'deba-vdi-2024',
