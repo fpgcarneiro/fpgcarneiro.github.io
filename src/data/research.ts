@@ -28,8 +28,8 @@ export const theses: ThesisEntry[] = [
     doi: '10.11606/T.55.2025.tde-22062026-131840',
     link: 'https://teses.usp.br/teses/disponiveis/55/55134/tde-22062026-131840/pt-br.html',
     summary: {
-      pt: 'Propõe a Arquitetura 6C, evolução do modelo 5C, incorporando a camada de Consciência — responsável por aprendizado contínuo, explicabilidade e governança ao longo do ciclo de vida da IA Industrial. A proposta foi validada em três estudos de caso: manutenção preditiva em uma indústria de óleo vegetal, previsão de demanda em uma indústria automotiva, e o sistema SmartProd de Planejamento e Controle da Produção.',
-      en: 'Proposes the 6C Architecture, an evolution of the 5C model, incorporating the Consciousness layer — responsible for continuous learning, explainability, and governance across the Industrial AI lifecycle. The proposal was validated through three case studies: predictive maintenance in a vegetable oil industry, demand forecasting in an automotive industry, and the SmartProd Production Planning and Control system.',
+      pt: 'Propõe a Arquitetura 6C, evolução do modelo 5C, incorporando a camada de Consciência, responsável por aprendizado contínuo, explicabilidade e governança ao longo do ciclo de vida da IA Industrial. A proposta foi validada em três estudos de caso: manutenção preditiva em uma indústria de óleo vegetal, previsão de demanda em uma indústria automotiva, e o sistema SmartProd de Planejamento e Controle da Produção.',
+      en: 'Proposes the 6C Architecture, an evolution of the 5C model, incorporating the Consciousness layer, responsible for continuous learning, explainability, and governance across the Industrial AI lifecycle. The proposal was validated through three case studies: predictive maintenance in a vegetable oil industry, demand forecasting in an automotive industry, and the SmartProd Production Planning and Control system.',
     },
   },
   {
@@ -119,16 +119,16 @@ export const publications: Publication[] = [
     year: 2019,
     venue: 'XXII Symposium on Image, Signal Processing and Artificial Vision (STSIVA)',
     title: {
-      pt: 'A Method for Automatic Identification of Crop Lines in Drone Images',
-      en: 'A Method for Automatic Identification of Crop Lines in Drone Images',
+      pt: 'A Method for Automatic Identification of Crop Lines in Drone Images from a Mango Tree Plantation Using Segmentation over YCrCb Color Space and Hough Transform',
+      en: 'A Method for Automatic Identification of Crop Lines in Drone Images from a Mango Tree Plantation Using Segmentation over YCrCb Color Space and Hough Transform',
     },
-    authors: 'Fernanda Pereira Guidotti Carneiro et al.',
+    authors: 'Ricardo A. Arango Quiroz, Fernanda Pereira Guidotti, Albeiro Espinosa Bedoya',
     doi: '10.1109/STSIVA.2019.8730214',
     link: 'https://ieeexplore.ieee.org/document/8730214',
-    firstAuthor: true,
+    firstAuthor: false,
     summary: {
-      pt: 'Estudo sobre identificação automática de linhas de cultivo em imagens capturadas por VANTs, no âmbito da visão computacional e do processamento de imagens, conectado à pesquisa de mestrado sobre arquiteturas de integração de drones.',
-      en: 'A study on automatic identification of crop lines in UAV-captured images, within computer vision and image processing, connected to the master’s research on UAV integration architectures.',
+      pt: 'Estudo sobre identificação automática de linhas de cultivo em imagens de drone de um pomar de mangueiras, usando segmentação no espaço de cor YCrCb e transformada de Hough, com 86% de eficiência. Conectado à pesquisa de mestrado sobre arquiteturas de integração de drones, em colaboração com a Universidad Nacional de Colombia.',
+      en: 'A study on automatic identification of crop lines in drone images of a mango plantation, using segmentation over YCrCb color space and the Hough transform, achieving 86% efficiency. Connected to the master’s research on UAV integration architectures, in collaboration with Universidad Nacional de Colombia.',
     },
   },
 ];

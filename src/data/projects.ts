@@ -31,8 +31,8 @@ export const projects: ProjectEntry[] = [
       en: 'Propose a reference architecture evolving the 5C model, incorporating continuous learning, explainability, and governance across the entire Industrial AI lifecycle.',
     },
     role: {
-      pt: 'Autora da arquitetura — concepção, formalização e validação em três estudos de caso industriais, no âmbito do doutorado (USP/ICMC).',
-      en: 'Architecture author — design, formalization, and validation across three industrial case studies, as part of the PhD (USP/ICMC).',
+      pt: 'Autora da arquitetura: concepção, formalização e validação em três estudos de caso industriais, no âmbito do doutorado (USP/ICMC).',
+      en: 'Architecture author: design, formalization, and validation across three industrial case studies, as part of the PhD (USP/ICMC).',
     },
     approach: {
       pt: 'Seis camadas (Conexão, Conversão, Ciberfísico, Cognição, Configuração e Consciência) fundamentadas em princípios de MLOps e CRISP-DM, materializadas como framework e plataforma modular.',
@@ -78,8 +78,8 @@ export const projects: ProjectEntry[] = [
     slug: 'vita-platform',
     title: { pt: 'Plataforma VITA', en: 'VITA Platform' },
     summary: {
-      pt: 'Visionary Industrial Technology Architecture — a estrutura conceitual que materializa a Arquitetura 6C em componentes de software.',
-      en: 'Visionary Industrial Technology Architecture — the conceptual structure that materializes the 6C Architecture into software components.',
+      pt: 'Visionary Industrial Technology Architecture: a estrutura conceitual que materializa a Arquitetura 6C em componentes de software.',
+      en: 'Visionary Industrial Technology Architecture: the conceptual structure that materializes the 6C Architecture into software components.',
     },
     context: {
       pt: 'Uma arquitetura de referência precisa de uma contraparte técnica para orientar como seus componentes são implementados, integrados e operados na prática.',
@@ -104,8 +104,8 @@ export const projects: ProjectEntry[] = [
     slug: 'arquitetura-vant',
     title: { pt: 'Arquitetura para integração de VANT', en: 'UAV Integration Architecture' },
     summary: {
-      pt: 'Arquitetura base para integrar Veículos Aéreos Não Tripulados a uma plataforma web — tema da dissertação de mestrado.',
-      en: 'Base architecture integrating Unmanned Aerial Vehicles with a web platform — the subject of the master’s dissertation.',
+      pt: 'Arquitetura base para integrar Veículos Aéreos Não Tripulados a uma plataforma web, tema da dissertação de mestrado.',
+      en: 'Base architecture integrating Unmanned Aerial Vehicles with a web platform, the subject of the master’s dissertation.',
     },
     context: {
       pt: 'VANTs vêm sendo usados em agricultura, segurança e monitoramento ambiental, mas faltava uma arquitetura geral para organizar o acesso a dados de voo entre diferentes aplicações.',
@@ -134,26 +134,52 @@ export const projects: ProjectEntry[] = [
     slug: 'mapa-de-ia',
     title: { pt: 'Mapa de IA', en: 'Mapa de IA' },
     summary: {
-      pt: 'Iniciativa criada por Fernanda para mapear o ecossistema de Inteligência Artificial.',
-      en: 'Initiative created by Fernanda to map the Artificial Intelligence ecosystem.',
+      pt: 'Método e intensivo para pequenas e médias empresas descobrirem onde, como e quando aplicar IA.',
+      en: 'A method and intensive workshop helping small and medium businesses find where, how, and when to apply AI.',
     },
     context: {
-      pt: 'Conteúdo detalhado a confirmar.',
-      en: 'Detailed content to be confirmed.',
+      pt: 'Muitas empresas já testaram ferramentas de IA, fizeram cursos ou assinaram plataformas, mas continuam sem saber onde a IA realmente traz resultado no negócio.',
+      en: 'Many businesses have already tried AI tools, taken courses, or paid for platforms, but still don’t know where AI actually brings results to the business.',
     },
     objective: {
-      pt: 'Conteúdo detalhado a confirmar.',
-      en: 'Detailed content to be confirmed.',
+      pt: 'Ajudar donos e gestores de empresas a identificar, em poucas horas, as tarefas certas para aplicar IA, sem depender de conhecimento técnico prévio.',
+      en: 'Help business owners and managers identify, in a few hours, the right tasks to apply AI to, without needing prior technical knowledge.',
     },
     role: {
-      pt: 'Criadora da iniciativa.',
-      en: 'Creator of the initiative.',
+      pt: 'Criadora do método e condutora do intensivo.',
+      en: 'Creator of the method and host of the intensive.',
     },
     approach: {
-      pt: 'Conteúdo detalhado a confirmar.',
-      en: 'Detailed content to be confirmed.',
+      pt: 'Método das Três Tarefas: listar o que se repete toda semana na empresa, filtrar cada tarefa por três perguntas (se repete, se é feita com texto ou informação, se um erro nela é fácil de conferir) e colocar a primeira tarefa aprovada para rodar com a ferramenta de IA que a empresa já tem.',
+      en: 'The Three Tasks Method: list what repeats every week in the business, filter each task through three questions (does it repeat, is it done with text or information, is an error in it easy to check), and put the first approved task into action with the AI tool the business already has.',
     },
     tech: [],
-    placeholder: true,
+    links: [{ label: { pt: 'Mapa de IA', en: 'Mapa de IA' }, href: 'https://mapadeia.com.br/' }],
+  },
+  {
+    slug: 'meu-tato',
+    title: { pt: 'Meu Tato', en: 'Meu Tato' },
+    summary: {
+      pt: 'Projeto pessoal, criado com o marido, para facilitar a vida de pessoas neurodivergentes.',
+      en: 'A personal project, created with her husband, to make life easier for neurodivergent people.',
+    },
+    context: {
+      pt: 'Pessoas neurodivergentes enfrentam desafios cotidianos de foco, produtividade e autorregulação que produtos e ferramentas genéricas não atendem bem.',
+      en: 'Neurodivergent people face everyday challenges with focus, productivity, and self-regulation that generic products and tools don’t serve well.',
+    },
+    objective: {
+      pt: 'Oferecer produtos sensoriais e, em desenvolvimento, um aplicativo de apoio a foco, produtividade e gestão do dia a dia.',
+      en: 'Offer sensory products and, currently in development, an app to support focus, productivity, and daily routine management.',
+    },
+    role: {
+      pt: 'Cofundadora, ao lado do marido.',
+      en: 'Co-founder, alongside her husband.',
+    },
+    approach: {
+      pt: 'Produtos sensoriais já disponíveis; aplicativo para pessoas neurodivergentes em desenvolvimento.',
+      en: 'Sensory products already available; an app for neurodivergent people currently in development.',
+    },
+    tech: [],
+    links: [{ label: { pt: 'Meu Tato', en: 'Meu Tato' }, href: 'https://meutato.com/' }],
   },
 ];

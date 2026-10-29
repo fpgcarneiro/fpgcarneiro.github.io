@@ -36,7 +36,7 @@ export const experience: ExperienceEntry[] = [
   {
     slug: 'senai-cimatec',
     org: 'SENAI Cimatec',
-    role: { pt: 'Bolsista de pesquisa — Big Data e IA', en: 'Research Fellow — Big Data and AI' },
+    role: { pt: 'Bolsista de pesquisa em Big Data e IA', en: 'Research Fellow in Big Data and AI' },
     location: 'Brasil',
     start: '2025-10',
     end: null,
@@ -86,7 +86,7 @@ export const experience: ExperienceEntry[] = [
   {
     slug: 'centro-paula-souza-araraquara',
     org: 'Centro Estadual de Educação Tecnológica Paula Souza',
-    role: { pt: 'Docente e instrutora de informática', en: 'Lecturer and Computing Instructor' },
+    role: { pt: 'Docente de informática', en: 'Computing Lecturer' },
     location: 'Araraquara, SP, Brasil',
     start: '2008-02',
     end: '2010-02',

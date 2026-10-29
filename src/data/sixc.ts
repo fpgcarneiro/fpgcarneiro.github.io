@@ -15,8 +15,8 @@ export const sixcLayers: SixCLayer[] = [
     name: { pt: 'Conexão', en: 'Connection' },
     tagline: { pt: 'Aquisição de dados', en: 'Data acquisition' },
     description: {
-      pt: 'Responsável pela aquisição e integração de dados industriais provenientes de sistemas corporativos, sensores, dispositivos conectados e registros operacionais — produção, estoques, ordens de fabricação e disponibilidade de recursos.',
-      en: 'Responsible for acquiring and integrating industrial data from corporate systems, sensors, connected devices, and operational records — production, inventory, work orders, and resource availability.',
+      pt: 'Responsável pela aquisição e integração de dados industriais provenientes de sistemas corporativos, sensores, dispositivos conectados e registros operacionais, como produção, estoques, ordens de fabricação e disponibilidade de recursos.',
+      en: 'Responsible for acquiring and integrating industrial data from corporate systems, sensors, connected devices, and operational records, such as production, inventory, work orders, and resource availability.',
     },
   },
   {
@@ -65,8 +65,8 @@ export const sixcLayers: SixCLayer[] = [
     name: { pt: 'Consciência', en: 'Consciousness' },
     tagline: { pt: 'A camada proposta na tese', en: 'The layer proposed in the thesis' },
     description: {
-      pt: 'O principal diferencial da Arquitetura 6C. Incorpora mecanismos de governança, monitoramento contínuo, aprendizado adaptativo e explicabilidade, além de recursos de IA generativa e LLMs que permitem interpretação contextualizada e interação semântica entre usuários e sistemas inteligentes — retroalimentando as demais camadas.',
-      en: "The main differentiator of the 6C Architecture. It incorporates governance, continuous monitoring, adaptive learning, and explainability mechanisms, along with generative AI and LLM capabilities that enable contextual interpretation and semantic interaction between users and intelligent systems — feeding back into the other layers.",
+      pt: 'O principal diferencial da Arquitetura 6C. Incorpora mecanismos de governança, monitoramento contínuo, aprendizado adaptativo e explicabilidade, além de recursos de IA generativa e LLMs que permitem interpretação contextualizada e interação semântica entre usuários e sistemas inteligentes. Essa camada retroalimenta as demais.',
+      en: "The main differentiator of the 6C Architecture. It incorporates governance, continuous monitoring, adaptive learning, and explainability mechanisms, along with generative AI and LLM capabilities that enable contextual interpretation and semantic interaction between users and intelligent systems. This layer feeds back into the others.",
     },
   },
 ];
@@ -99,7 +99,7 @@ export const sixcCases: SixCCase[] = [
   },
   {
     id: 'smartprod',
-    title: { pt: 'SmartProd — Planejamento e Controle da Produção', en: 'SmartProd — Production Planning and Control' },
+    title: { pt: 'SmartProd: Planejamento e Controle da Produção', en: 'SmartProd: Production Planning and Control' },
     context: {
       pt: 'Sistema inteligente que combina algoritmos de otimização, simulação e IA generativa para oferecer um ciclo de decisão contínuo, explicável e adaptativo. Desenvolvido na MaximizaIA.',
       en: 'An intelligent system combining optimization algorithms, simulation, and generative AI to offer a continuous, explainable, and adaptive decision cycle. Developed at MaximizaIA.',

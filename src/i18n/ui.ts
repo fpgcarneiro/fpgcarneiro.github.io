@@ -27,7 +27,7 @@ export const ui = {
     'home.kicker': 'Doutora em Ciência da Computação · IA Industrial',
     'home.headline': 'Conectando ciência, tecnologia e indústria para transformar desafios em soluções inteligentes.',
     'home.intro':
-      'Pesquisadora e desenvolvedora focada em Inteligência Artificial aplicada a ambientes industriais — da previsão de demanda à manutenção preditiva, da arquitetura de sistemas à governança de modelos.',
+      'Pesquisadora e desenvolvedora focada em Inteligência Artificial aplicada a ambientes industriais, da previsão de demanda à manutenção preditiva, da arquitetura de sistemas à governança de modelos.',
     'home.cta.research': 'Ver pesquisa',
     'home.cta.projects': 'Ver projetos',
     'home.areas.title': 'Áreas de atuação',
@@ -54,7 +54,7 @@ export const ui = {
     'sixc.title': 'Arquitetura 6C',
     'sixc.subtitle': 'Um framework para Inteligência Artificial Industrial',
     'sixc.intro':
-      'A Arquitetura 6C é uma evolução do modelo 5C (Lee et al., 2015) proposta na tese de doutorado de Fernanda Guidotti Carneiro. Ela incorpora uma sexta camada — Consciência — responsável por aprendizado contínuo, explicabilidade e governança ao longo de todo o ciclo de vida da IA Industrial.',
+      'A Arquitetura 6C é uma evolução do modelo 5C (Lee et al., 2015) proposta na tese de doutorado de Fernanda Guidotti Carneiro. Ela incorpora uma sexta camada, a Consciência, responsável por aprendizado contínuo, explicabilidade e governança ao longo de todo o ciclo de vida da IA Industrial.',
     'sixc.layers.title': 'As seis camadas',
     'sixc.layers.hint': 'Clique em uma camada para explorar',
     'sixc.cases.title': 'Validação: três estudos de caso',
@@ -109,7 +109,7 @@ export const ui = {
     'home.kicker': 'PhD in Computer Science · Industrial AI',
     'home.headline': 'Connecting science, technology, and industry to turn challenges into intelligent solutions.',
     'home.intro':
-      'Researcher and developer focused on Artificial Intelligence applied to industrial environments — from demand forecasting to predictive maintenance, from systems architecture to model governance.',
+      'Researcher and developer focused on Artificial Intelligence applied to industrial environments, from demand forecasting to predictive maintenance, from systems architecture to model governance.',
     'home.cta.research': 'View research',
     'home.cta.projects': 'View projects',
     'home.areas.title': 'Areas of focus',
@@ -136,7 +136,7 @@ export const ui = {
     'sixc.title': '6C Architecture',
     'sixc.subtitle': 'A framework for Industrial Artificial Intelligence',
     'sixc.intro':
-      "The 6C Architecture is an evolution of the 5C model (Lee et al., 2015) proposed in Fernanda Guidotti Carneiro's PhD thesis. It incorporates a sixth layer — Consciousness — responsible for continuous learning, explainability, and governance across the entire Industrial AI lifecycle.",
+      "The 6C Architecture is an evolution of the 5C model (Lee et al., 2015) proposed in Fernanda Guidotti Carneiro's PhD thesis. It incorporates a sixth layer, Consciousness, responsible for continuous learning, explainability, and governance across the entire Industrial AI lifecycle.",
     'sixc.layers.title': 'The six layers',
     'sixc.layers.hint': 'Click a layer to explore',
     'sixc.cases.title': 'Validation: three case studies',
