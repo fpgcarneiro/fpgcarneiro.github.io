@@ -26,7 +26,7 @@ export const ui = {
 
     'home.kicker': 'Pesquisa em IA · Inteligência Industrial · Inovação',
     'home.headline': 'Da pesquisa científica à Inteligência Artificial aplicada à indústria.',
-    'home.intro': 'Doutora em Ciências de Computação e Matemática Computacional pela USP, pesquisadora e profissional de inovação tecnológica.',
+    'home.intro': 'Doutora em Ciências de Computação e Matemática Computacional pela USP, pesquisadora e arquiteta de soluções de Inteligência Artificial.',
     'home.quote': 'Acredito que os dados precisam se transformar em informação para orientar decisões, que a pesquisa deve gerar soluções para problemas reais e que o conhecimento ganha seu verdadeiro valor quando é multiplicado.',
     'home.cta.research': 'Ver pesquisa',
     'home.cta.projects': 'Ver projetos',
@@ -116,7 +116,7 @@ export const ui = {
 
     'home.kicker': 'AI Research · Industrial Intelligence · Innovation',
     'home.headline': 'From scientific research to Artificial Intelligence applied to industry.',
-    'home.intro': 'PhD in Computer Science and Computational Mathematics from USP, researcher and technology innovation professional.',
+    'home.intro': 'PhD in Computer Science and Computational Mathematics from USP, researcher and Artificial Intelligence solutions architect.',
     'home.quote': 'I believe data needs to become information to guide decisions, that research should produce solutions to real problems, and that knowledge gains its true value when it multiplies.',
     'home.cta.research': 'View research',
     'home.cta.projects': 'View projects',
