@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Kicker from '../components/Kicker.astro';
+import { useTranslations } from '../i18n/utils';
+import { academicLinks } from '../data/research';
+
+const lang = 'pt' as const;
+const t = useTranslations(lang);
+
+const links = [
+  { label: 'LinkedIn', href: academicLinks.linkedin },
+  { label: 'Google Scholar', href: academicLinks.scholar },
+  { label: 'ORCID', href: academicLinks.orcid },
+  { label: 'Currículo Lattes', href: academicLinks.lattes },
+  { label: 'GitHub', href: academicLinks.github },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title="Contato"
+  description="Entre em contato com Fernanda Guidotti Carneiro para colaborações científicas, projetos de PD&I e oportunidades acadêmicas e industriais."
+  path="/contato"
+>
+  <section class="mx-auto max-w-2xl px-5 py-14 sm:px-8 sm:py-24">
+    <Kicker>{t('contact.kicker')}</Kicker>
+    <h1 class="mt-3 font-serif-display text-3xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+      {t('contact.title')}
+    </h1>
+    <p class="prose-measure mt-4 text-base leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      {t('contact.intro')}
+    </p>
+
+    <a
+      href={`mailto:${academicLinks.email}`}
+      class="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-petrol-600)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-petrol-700)]"
+    >
+      {t('contact.email')}: {academicLinks.email}
+    </a>
+
+    <div class="mt-14 grid grid-cols-2 gap-4 border-t border-[var(--color-line)] pt-10 sm:grid-cols-3 dark:border-[var(--color-line-dark)]">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-xl border border-[var(--color-line)] px-4 py-3 text-center text-sm font-medium text-[var(--color-ink-soft)] transition hover:border-[var(--color-petrol-500)] hover:text-[var(--color-petrol-600)] dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

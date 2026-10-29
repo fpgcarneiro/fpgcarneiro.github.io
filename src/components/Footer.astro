@@ -1,0 +1,51 @@
+---
+import { useTranslations, navPath, type Lang } from '../i18n/utils';
+import { academicLinks } from '../data/research';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+
+const links = [
+  { label: 'LinkedIn', href: academicLinks.linkedin },
+  { label: 'Google Scholar', href: academicLinks.scholar },
+  { label: 'ORCID', href: academicLinks.orcid },
+  { label: 'Lattes', href: academicLinks.lattes },
+  { label: 'GitHub', href: academicLinks.github },
+];
+---
+
+<footer class="border-t border-[var(--color-line)] bg-[var(--color-paper-dim)] dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)]">
+  <div class="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <p class="font-serif-display text-base font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Fernanda Guidotti Carneiro
+        </p>
+        <p class="mt-1 max-w-sm text-sm text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+          {t('home.kicker')}
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[var(--color-ink-soft)] underline-grow hover:text-[var(--color-petrol-600)] dark:text-[var(--color-ink-dark-soft)] dark:hover:text-[var(--color-petrol-300)]"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col gap-2 border-t border-[var(--color-line)] pt-6 text-xs text-[var(--color-ink-soft)] sm:flex-row sm:items-center sm:justify-between dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]">
+      <p>© {year} Fernanda Guidotti Carneiro. {t('footer.rights')}</p>
+      <a href={navPath(lang, 'contato')} class="underline-grow">{t('nav.contact')}</a>
+    </div>
+  </div>
+</footer>

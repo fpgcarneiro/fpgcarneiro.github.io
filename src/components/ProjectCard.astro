@@ -1,0 +1,35 @@
+---
+import { navPath, type Lang } from '../i18n/utils';
+import type { ProjectEntry } from '../data/projects';
+
+interface Props {
+  project: ProjectEntry;
+  lang: Lang;
+}
+
+const { project, lang } = Astro.props;
+const href = `${navPath(lang, 'projetos')}/${project.slug}`;
+---
+
+<a
+  href={href}
+  class="group flex h-full flex-col justify-between rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-petrol-500)] hover:shadow-[0_8px_30px_-12px_rgba(22,63,66,0.25)] dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)]"
+>
+  <div>
+    <h3 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-petrol-700)] dark:text-[var(--color-ink-dark)] dark:group-hover:text-[var(--color-petrol-300)]">
+      {project.title[lang]}
+    </h3>
+    <p class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      {project.summary[lang]}
+    </p>
+  </div>
+  {project.tech.length > 0 && (
+    <div class="mt-5 flex flex-wrap gap-2">
+      {project.tech.slice(0, 4).map((item) => (
+        <span class="rounded-full bg-[var(--color-paper-dim)] px-2.5 py-1 text-[11px] font-medium text-[var(--color-ink-soft)] dark:bg-[var(--color-paper-dark)] dark:text-[var(--color-ink-dark-soft)]">
+          {item}
+        </span>
+      ))}
+    </div>
+  )}
+</a>

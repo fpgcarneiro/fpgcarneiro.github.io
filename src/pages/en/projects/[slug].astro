@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Kicker from '../../../components/Kicker.astro';
+import { useTranslations, navPath } from '../../../i18n/utils';
+import { projects } from '../../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const lang = 'en' as const;
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={project.title.en}
+  description={project.summary.en}
+  path={`/en/projects/${project.slug}`}
+>
+  <section class="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
+    <a href={navPath(lang, 'projetos')} class="text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+      ← {t('projects.back')}
+    </a>
+
+    <Kicker class="mt-6">{t('projects.kicker')}</Kicker>
+    <h1 class="mt-2 font-serif-display text-3xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+      {project.title.en}
+    </h1>
+    <p class="prose-measure mt-3 text-base leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      {project.summary.en}
+    </p>
+
+    {project.placeholder && (
+      <p class="mt-6 rounded-xl border border-dashed border-[var(--color-line)] bg-[var(--color-paper-dim)] px-4 py-3 text-sm text-[var(--color-ink-soft)] dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)] dark:text-[var(--color-ink-dark-soft)]">
+        Detailed content for this project is coming soon.
+      </p>
+    )}
+
+    <dl class="mt-10 space-y-8">
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">Context</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.context.en}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">Objective</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.objective.en}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">{t('projects.role')}</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.role.en}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">Approach</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.approach.en}</dd>
+      </div>
+      {project.results && (
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">Results</dt>
+          <dd class="mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.results.en}</dd>
+        </div>
+      )}
+    </dl>
+
+    {project.tech.length > 0 && (
+      <div class="mt-10">
+        <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">{t('projects.tech')}</dt>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {project.tech.map((item) => (
+            <span class="rounded-full border border-[var(--color-line)] px-3 py-1 text-xs font-medium text-[var(--color-ink-soft)] dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {project.links && project.links.length > 0 && (
+      <div class="mt-10 flex flex-wrap gap-4 border-t border-[var(--color-line)] pt-8 dark:border-[var(--color-line-dark)]">
+        {project.links.map((link) => (
+          <a
+            href={link.href.startsWith('http') ? link.href : navPath(lang, 'arquitetura-6c')}
+            target={link.href.startsWith('http') ? '_blank' : undefined}
+            rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            class="text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]"
+          >
+            {link.label.en} ↗
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

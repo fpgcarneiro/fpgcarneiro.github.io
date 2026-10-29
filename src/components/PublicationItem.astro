@@ -1,0 +1,35 @@
+---
+import type { Lang } from '../i18n/utils';
+import type { Publication } from '../data/research';
+
+interface Props {
+  pub: Publication;
+  lang: Lang;
+}
+
+const { pub, lang } = Astro.props;
+const label = lang === 'pt' ? 'Ver publicação' : 'View publication';
+---
+
+<article class="border-b border-[var(--color-line)] py-6 first:pt-0 last:border-b-0 dark:border-[var(--color-line-dark)]">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <span class="text-sm font-semibold text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">{pub.year}</span>
+    {pub.firstAuthor && (
+      <span class="text-[11px] font-medium uppercase tracking-wide text-[var(--color-sand-500)]">
+        {lang === 'pt' ? 'Primeira autoria' : 'First author'}
+      </span>
+    )}
+  </div>
+  <h3 class="mt-1 font-serif-display text-lg font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+    {pub.title[lang]}
+  </h3>
+  <p class="mt-1 text-sm italic text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{pub.venue}</p>
+  <p class="mt-1 text-sm text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{pub.authors}</p>
+  <p class="mt-3 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{pub.summary[lang]}</p>
+  <div class="mt-3 flex flex-wrap items-center gap-4 text-sm">
+    <a href={pub.link} target="_blank" rel="noopener noreferrer" class="font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+      {label} ↗
+    </a>
+    {pub.doi && <span class="text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">DOI: {pub.doi}</span>}
+  </div>
+</article>

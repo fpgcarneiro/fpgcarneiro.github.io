@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Kicker from '../../components/Kicker.astro';
+import SixCLayers from '../../components/SixCLayers.astro';
+import { useTranslations, navPath } from '../../i18n/utils';
+import { sixcCases } from '../../data/sixc';
+import { publications, theses } from '../../data/research';
+import overview from '../../assets/diagrams/6c-overview.png';
+import diagramPM from '../../assets/diagrams/case-predictive-maintenance.png';
+import diagramDF from '../../assets/diagrams/case-demand-forecasting.png';
+import diagramSP from '../../assets/diagrams/case-smartprod.png';
+
+const lang = 'en' as const;
+const t = useTranslations(lang);
+
+const diagramMap: Record<string, ImageMetadata> = {
+  'case-predictive-maintenance.png': diagramPM,
+  'case-demand-forecasting.png': diagramDF,
+  'case-smartprod.png': diagramSP,
+};
+
+const thesis = theses.find((th) => th.slug === 'arquitetura-6c')!;
+const related = publications.filter((p) => ['six-layer-architecture-icsoft-2024', 'arquitetura-6c-pcp-enegep-2026'].includes(p.slug));
+---
+
+<BaseLayout
+  lang={lang}
+  title="6C Architecture"
+  description="The 6C Architecture: Fernanda Guidotti Carneiro's framework for Industrial Artificial Intelligence, with six layers and validation in three case studies."
+  path="/en/6c-architecture"
+>
+  <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8 sm:py-20">
+    <Kicker>{t('sixc.kicker')}</Kicker>
+    <h1 class="mt-3 font-serif-display text-3xl font-semibold text-[var(--color-ink)] sm:text-4xl dark:text-[var(--color-ink-dark)]">
+      {t('sixc.title')}
+    </h1>
+    <p class="mt-1 text-lg text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{t('sixc.subtitle')}</p>
+    <p class="prose-measure mt-6 text-base leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      {t('sixc.intro')}
+    </p>
+
+    <div class="mt-10 overflow-hidden rounded-2xl border border-[var(--color-line)] dark:border-[var(--color-line-dark)]">
+      <Image src={overview} alt="General diagram of the 6C Architecture, showing the six layers and associated technologies" width={1300} class="w-full bg-white" />
+    </div>
+
+    <div class="mt-16">
+      <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('sixc.layers.title')}
+      </h2>
+      <p class="mt-1 text-sm text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{t('sixc.layers.hint')}</p>
+      <div class="mt-6">
+        <SixCLayers lang={lang} />
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('sixc.cases.title')}
+      </h2>
+      <p class="mt-1 max-w-xl text-sm text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{t('sixc.cases.intro')}</p>
+
+      <div class="mt-8 space-y-14">
+        {sixcCases.map((c) => (
+          <article>
+            <h3 class="font-serif-display text-lg font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">{c.title[lang]}</h3>
+            <p class="prose-measure mt-2 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+              {c.context[lang]}
+            </p>
+            <div class="mt-5 overflow-hidden rounded-2xl border border-[var(--color-line)] dark:border-[var(--color-line-dark)]">
+              <Image src={diagramMap[c.diagram]} alt={c.title[lang]} width={1200} class="w-full bg-white" />
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-20 rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper-dim)] p-7 dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)]">
+      <h2 class="font-serif-display text-lg font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('sixc.related.title')}
+      </h2>
+      <ul class="mt-4 space-y-3">
+        {related.map((pub) => (
+          <li>
+            <a href={pub.link} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+              {pub.title.en} ({pub.year}) ↗
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href={thesis.link} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+            {thesis.title.en} — PhD thesis (2025) ↗
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt-12">
+      <a href={`${navPath(lang, 'projetos')}/smartprod`} class="text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+        See the 6C Architecture in production at SmartProd →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

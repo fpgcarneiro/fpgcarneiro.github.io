@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Kicker from '../../components/Kicker.astro';
+import PublicationItem from '../../components/PublicationItem.astro';
+import { useTranslations } from '../../i18n/utils';
+import { publications, theses, academicLinks } from '../../data/research';
+
+const lang = 'en' as const;
+const t = useTranslations(lang);
+
+const academicProfiles = [
+  { label: 'Lattes CV', href: academicLinks.lattes },
+  { label: 'Google Scholar', href: academicLinks.scholar },
+  { label: 'ORCID', href: academicLinks.orcid },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title="Research"
+  description="Theses, dissertation, and published papers by Fernanda Guidotti Carneiro on Industrial AI, systems architecture, and optimization."
+  path="/en/research"
+>
+  <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8 sm:py-20">
+    <Kicker>{t('research.kicker')}</Kicker>
+    <h1 class="mt-3 font-serif-display text-3xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+      {t('research.title')}
+    </h1>
+    <p class="prose-measure mt-4 text-base leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      {t('research.intro')}
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3">
+      {academicProfiles.map((profile) => (
+        <a
+          href={profile.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full border border-[var(--color-line)] px-4 py-2 text-sm font-medium text-[var(--color-ink-soft)] transition hover:border-[var(--color-petrol-500)] hover:text-[var(--color-petrol-600)] dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]"
+        >
+          {profile.label} ↗
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-16">
+      <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('research.theses')}
+      </h2>
+      <div class="mt-6 space-y-6">
+        {theses.map((thesis) => (
+          <article class="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-6 dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)]">
+            <span class="text-xs font-semibold uppercase tracking-wide text-[var(--color-petrol-600)] dark:text-[var(--color-petrol-300)]">
+              {thesis.kind === 'doctorate' ? 'PhD thesis' : "Master's dissertation"}
+            </span>
+            <h3 class="mt-2 font-serif-display text-lg font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+              {thesis.title.en}
+            </h3>
+            <p class="mt-1 text-sm text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{thesis.institution}</p>
+            <dl class="mt-3 grid gap-x-6 gap-y-1 text-sm text-[var(--color-ink-soft)] sm:grid-cols-2 dark:text-[var(--color-ink-dark-soft)]">
+              <div><dt class="inline font-medium">{t('research.advisor')}: </dt><dd class="inline">{thesis.advisor}</dd></div>
+              {thesis.coadvisor && (
+                <div><dt class="inline font-medium">{t('research.coadvisor')}: </dt><dd class="inline">{thesis.coadvisor}</dd></div>
+              )}
+              <div><dt class="inline font-medium">{t('research.defense')}: </dt><dd class="inline">{new Date(thesis.defenseDate).toLocaleDateString('en-US')}</dd></div>
+              <div><dt class="inline font-medium">{t('research.doi')}: </dt><dd class="inline">{thesis.doi}</dd></div>
+            </dl>
+            <p class="mt-4 text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+              {thesis.summary.en}
+            </p>
+            <a href={thesis.link} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]">
+              View at USP Digital Library ↗
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('research.papers')}
+      </h2>
+      <div class="mt-4">
+        {publications.map((pub) => (
+          <PublicationItem pub={pub} lang={lang} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

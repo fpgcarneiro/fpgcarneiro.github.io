@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fpgcarneiro.github.io/sitemap-index.xml

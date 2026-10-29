@@ -1,0 +1,61 @@
+---
+import type { Lang } from '../i18n/utils';
+import { sixcLayers } from '../data/sixc';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const colors: Record<string, string> = {
+  connection: '#6fa98c',
+  conversion: '#d4ab4a',
+  'cyber-physical': '#d98a4e',
+  cognition: '#5f8fb0',
+  configuration: '#9a9a9a',
+  consciousness: '#8077ad',
+};
+---
+
+<div class="space-y-3">
+  {sixcLayers.map((layer, i) => (
+    <details
+      class="group rounded-xl border border-[var(--color-line)] bg-[var(--color-paper)] open:shadow-sm dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark-dim)]"
+      open={i === 5}
+    >
+      <summary
+        class="flex cursor-pointer list-none items-center gap-4 rounded-xl px-5 py-4 marker:content-none"
+        style={`border-left: 4px solid ${colors[layer.id]}`}
+      >
+        <span
+          class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white"
+          style={`background-color: ${colors[layer.id]}`}
+        >
+          {layer.number}
+        </span>
+        <span class="flex-1">
+          <span class="block font-serif-display text-base font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+            {layer.name[lang]}
+          </span>
+          <span class="block text-xs text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{layer.tagline[lang]}</span>
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          class="h-4 w-4 flex-shrink-0 text-[var(--color-ink-soft)] transition-transform group-open:rotate-180"
+        >
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </summary>
+      <div class="px-5 pb-5 pl-[4.25rem]">
+        <p class="text-sm leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+          {layer.description[lang]}
+        </p>
+      </div>
+    </details>
+  ))}
+</div>

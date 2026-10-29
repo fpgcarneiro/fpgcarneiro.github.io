@@ -1,0 +1,140 @@
+---
+import { useTranslations, localizedPath, navPath, alternatePath, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const t = useTranslations(lang);
+
+const navItems = [
+  { key: 'nav.home', path: '' },
+  { key: 'nav.about', path: 'sobre' },
+  { key: 'nav.research', path: 'pesquisa' },
+  { key: 'nav.sixc', path: 'arquitetura-6c' },
+  { key: 'nav.projects', path: 'projetos' },
+  { key: 'nav.experience', path: 'experiencia' },
+  { key: 'nav.speaking', path: 'palestras' },
+  { key: 'nav.contact', path: 'contato' },
+] as const;
+
+const otherLang = lang === 'pt' ? 'en' : 'pt';
+const switchHref = alternatePath(otherLang, currentPath);
+
+function isActive(itemPath: string) {
+  const normalizedCurrent = currentPath.replace(/\/$/, '') || '/';
+  const target = navPath(lang, itemPath).replace(/\/$/, '') || '/';
+  return normalizedCurrent === target;
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-[var(--color-line)] bg-[var(--color-paper)]/90 backdrop-blur dark:border-[var(--color-line-dark)] dark:bg-[var(--color-paper-dark)]/90">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+    <a href={localizedPath(lang, '')} class="font-serif-display text-lg font-semibold tracking-tight text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+      Fernanda Guidotti Carneiro
+    </a>
+
+    <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
+      {navItems.map((item) => (
+        <a
+          href={navPath(lang, item.path)}
+          class:list={[
+            'text-sm underline-grow',
+            isActive(item.path)
+              ? 'font-medium text-[var(--color-petrol-700)] dark:text-[var(--color-petrol-300)]'
+              : 'text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)] hover:text-[var(--color-ink)] dark:hover:text-[var(--color-ink-dark)]',
+          ]}
+        >
+          {t(item.key)}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={switchHref}
+        class="rounded-full border border-[var(--color-line)] px-3 py-1 text-xs font-medium text-[var(--color-ink-soft)] transition hover:border-[var(--color-petrol-500)] hover:text-[var(--color-petrol-600)] dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]"
+        aria-label="Switch language"
+      >
+        {t('lang.switch')}
+      </a>
+
+      <button
+        id="theme-toggle"
+        type="button"
+        class="rounded-full border border-[var(--color-line)] p-2 text-[var(--color-ink-soft)] transition hover:border-[var(--color-petrol-500)] hover:text-[var(--color-petrol-600)] dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]"
+        aria-label="Toggle theme"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-4 w-4">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="hidden h-4 w-4">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="rounded-full border border-[var(--color-line)] p-2 text-[var(--color-ink-soft)] lg:hidden dark:border-[var(--color-line-dark)] dark:text-[var(--color-ink-dark-soft)]"
+        aria-label={t('nav.menu')}
+        aria-expanded="false"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="hidden flex-col gap-1 border-t border-[var(--color-line)] px-5 py-3 lg:hidden dark:border-[var(--color-line-dark)]" aria-label="Mobile">
+    {navItems.map((item) => (
+      <a
+        href={navPath(lang, item.path)}
+        class="rounded px-2 py-2 text-sm text-[var(--color-ink-soft)] hover:bg-[var(--color-paper-dim)] dark:text-[var(--color-ink-dark-soft)] dark:hover:bg-[var(--color-paper-dark-dim)]"
+      >
+        {t(item.key)}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script is:inline>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    const sun = document.getElementById('icon-sun');
+    const moon = document.getElementById('icon-moon');
+
+    function sync() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        sun?.classList.add('hidden');
+        moon?.classList.remove('hidden');
+      } else {
+        sun?.classList.remove('hidden');
+        moon?.classList.add('hidden');
+      }
+    }
+    sync();
+
+    toggle?.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      sync();
+    });
+
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    menuToggle?.addEventListener('click', () => {
+      const isHidden = menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden');
+      menu?.classList.toggle('flex');
+      menuToggle.setAttribute('aria-expanded', String(Boolean(isHidden)));
+    });
+  })();
+</script>

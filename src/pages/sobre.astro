@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Kicker from '../components/Kicker.astro';
+import { useTranslations } from '../i18n/utils';
+import { academicLinks } from '../data/research';
+import portrait from '../assets/photos/source/fernanda-portrait-2.jpg';
+
+const lang = 'pt' as const;
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title="Sobre"
+  description="Trajetória de Fernanda Guidotti Carneiro — da Fatec ao doutorado na USP, passando por SENAI, docência e a criação da Arquitetura 6C."
+  path="/sobre"
+>
+  <section class="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+    <div class="lg:sticky lg:top-24">
+      <Kicker>{t('about.kicker')}</Kicker>
+      <h1 class="mt-3 font-serif-display text-3xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+        {t('about.title')}
+      </h1>
+      <Image
+        src={portrait}
+        alt="Fernanda Guidotti Carneiro"
+        width={480}
+        height={600}
+        class="mt-8 aspect-[4/5] w-full max-w-xs rounded-2xl object-cover shadow-[0_20px_60px_-20px_rgba(22,63,66,0.35)]"
+      />
+      <a
+        href={`mailto:${academicLinks.email}`}
+        class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-petrol-600)] underline-grow dark:text-[var(--color-petrol-300)]"
+      >
+        {academicLinks.email} ↗
+      </a>
+    </div>
+
+    <div class="prose-measure space-y-8 text-[0.98rem] leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
+      <div>
+        <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Formação
+        </h2>
+        <p class="mt-3">
+          Fernanda é doutora em Ciências de Computação e Matemática Computacional pelo Instituto de Ciências
+          Matemáticas e de Computação da USP (ICMC/USP), com tese defendida em dezembro de 2025 sobre a
+          <strong>Arquitetura 6C</strong>, um framework de referência para Inteligência Artificial Industrial.
+          Antes disso, concluiu o mestrado na mesma instituição, propondo uma arquitetura base para integração de
+          veículos aéreos não tripulados (VANTs) a plataformas web. Sua formação começou na Fatec de Taquaritinga,
+          em Tecnologia em Processamento de Dados.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Pesquisa aplicada e inovação industrial
+        </h2>
+        <p class="mt-3">
+          Ao longo de mais de uma década, Fernanda construiu sua trajetória na interseção entre pesquisa acadêmica e
+          aplicação industrial. Atuou como bolsista de pesquisa em Pesquisa, Desenvolvimento e Inovação (PD&I) no
+          SENAI ISI-SE (Florianópolis) e, em seguida, como analista sênior de sistemas e pesquisadora no SENAI
+          ISI-SIM (São Leopoldo), onde desenvolveu arquiteturas e soluções de Inteligência Artificial para contextos
+          industriais reais. Atualmente é bolsista de pesquisa em Big Data e IA no SENAI Cimatec.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Da pesquisa ao produto
+        </h2>
+        <p class="mt-3">
+          Em 2023, tornou-se sócia e especialista em IA e Automação na <strong>MaximizaIA</strong>, startup onde
+          lidera o desenvolvimento de soluções de Inteligência Artificial aplicadas à indústria — incluindo o
+          <strong>SmartProd</strong>, sistema de Planejamento e Controle da Produção que materializa, na prática, os
+          princípios da Arquitetura 6C. É também criadora do <strong>Mapa de IA</strong>, iniciativa voltada ao
+          mapeamento do ecossistema de Inteligência Artificial.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Docência e disseminação do conhecimento
+        </h2>
+        <p class="mt-3">
+          Desde março de 2026, é docente universitária na Fatec de Catanduva, no curso de Ciência de Dados para o
+          Agronegócio, onde orienta estudantes no desenvolvimento de soluções tecnológicas baseadas em dados para o
+          setor agroindustrial — dando continuidade a uma trajetória de docência que já incluiu o Centro Estadual de
+          Educação Tecnológica Paula Souza, em Araraquara.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-serif-display text-xl font-semibold text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          Uma visão: ciência e indústria lado a lado
+        </h2>
+        <p class="mt-3">
+          O fio condutor da trajetória de Fernanda é a convicção de que a Inteligência Artificial só gera valor real
+          quando é construída sobre fundamentos sólidos de arquitetura, governança e rastreabilidade — não apenas
+          como modelos isolados, mas como sistemas vivos, capazes de aprender continuamente com a operação. É essa
+          visão que fundamenta a Arquitetura 6C e orienta seu trabalho entre a universidade e a indústria.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
