@@ -37,6 +37,13 @@ const thesis = theses.find((t2) => t2.slug === 'arquitetura-6c')!;
       <p class="prose-measure mt-6 text-base leading-relaxed text-[var(--color-ink-soft)] sm:text-lg dark:text-[var(--color-ink-dark-soft)]">
         {t('home.intro')}
       </p>
+
+      <blockquote class="prose-measure mt-8 border-l-2 border-[var(--color-petrol-500)] pl-6">
+        <p class="font-serif-display text-lg italic leading-relaxed text-[var(--color-ink)] dark:text-[var(--color-ink-dark)]">
+          “{t('home.quote')}”
+        </p>
+      </blockquote>
+
       <div class="mt-8 flex flex-wrap gap-4">
         <a
           href={localizedPath(lang, 'pesquisa')}

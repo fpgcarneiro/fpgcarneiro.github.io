@@ -26,8 +26,8 @@ export const ui = {
 
     'home.kicker': 'Pesquisa em IA · Inteligência Industrial · Inovação',
     'home.headline': 'Da pesquisa científica à Inteligência Artificial aplicada à indústria.',
-    'home.intro':
-      'Doutora em Ciências de Computação e Matemática Computacional pela USP, pesquisadora e profissional de inovação tecnológica. Desenvolvo arquiteturas e soluções inteligentes que conectam dados, modelos de IA e processos industriais para apoiar decisões e transformar operações.',
+    'home.intro': 'Doutora em Ciências de Computação e Matemática Computacional pela USP, pesquisadora e profissional de inovação tecnológica.',
+    'home.quote': 'Acredito que conhecimento não é para ficar guardado. É para ser multiplicado e transformado em algo que faça a diferença. Assim enxergo a ciência, a tecnologia e tudo o que construo.',
     'home.cta.research': 'Ver pesquisa',
     'home.cta.projects': 'Ver projetos',
     'home.areas.title': 'Áreas de atuação',
@@ -116,8 +116,8 @@ export const ui = {
 
     'home.kicker': 'AI Research · Industrial Intelligence · Innovation',
     'home.headline': 'From scientific research to Artificial Intelligence applied to industry.',
-    'home.intro':
-      'PhD in Computer Science and Computational Mathematics from USP, researcher and technology innovation professional. I develop intelligent architectures and solutions that connect data, AI models, and industrial processes to support decisions and transform operations.',
+    'home.intro': 'PhD in Computer Science and Computational Mathematics from USP, researcher and technology innovation professional.',
+    'home.quote': "I believe knowledge isn't meant to stay stored away. It's meant to be multiplied, turned into something that makes a difference. That's how I see science, technology, and everything I build.",
     'home.cta.research': 'View research',
     'home.cta.projects': 'View projects',
     'home.areas.title': 'Areas of focus',

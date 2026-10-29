@@ -13,6 +13,7 @@ const links = [
   { label: 'ORCID', href: academicLinks.orcid },
   { label: 'Lattes CV', href: academicLinks.lattes },
   { label: 'GitHub', href: academicLinks.github },
+  { label: 'MaximizaIA', href: 'https://www.maximizaia.com/' },
 ];
 ---
 
@@ -38,7 +39,7 @@ const links = [
       {t('contact.email')}: {academicLinks.email}
     </a>
 
-    <div class="mt-14 grid grid-cols-2 gap-4 border-t border-[var(--color-line)] pt-10 sm:grid-cols-3 dark:border-[var(--color-line-dark)]">
+    <div class="mt-14 grid grid-cols-1 gap-4 border-t border-[var(--color-line)] pt-10 sm:grid-cols-2 lg:grid-cols-3 dark:border-[var(--color-line-dark)]">
       {links.map((link) => (
         <a
           href={link.href}
