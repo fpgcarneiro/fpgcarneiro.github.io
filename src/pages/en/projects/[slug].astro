@@ -52,7 +52,7 @@ const sections: { heading: string; body: string }[] = [
       ← {t('projects.back')}
     </a>
 
-    <Kicker class="mt-6">{project.category === 'research' ? 'Research and technology' : 'Entrepreneurship'}</Kicker>
+    <Kicker class="mt-6">{project.categoryLabel?.en ?? (project.category === 'research' ? 'Research and technology' : 'Entrepreneurship')}</Kicker>
     <h1 class="mt-2 font-serif-display text-3xl font-semibold text-[var(--color-ink)] sm:text-4xl dark:text-[var(--color-ink-dark)]">
       {project.title.en}
     </h1>
