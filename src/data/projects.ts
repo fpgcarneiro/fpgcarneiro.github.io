@@ -244,8 +244,8 @@ export const projects: ProjectEntry[] = [
       en: 'In the same assistant, LIA could move from a daily to-do list to a conversation with someone looking for a consultation, without losing the thread between the two: that integration of personal organization and professional relationships was what the project was built on.',
     },
     caution: {
-      pt: 'Projeto autoral de Fernanda, desenvolvido e testado.',
-      en: 'Fernanda’s own project, developed and tested.',
+      pt: 'Projeto autoral, desenvolvido e testado por Fernanda Guidotti Carneiro.',
+      en: 'An original project, developed and tested by Fernanda Guidotti Carneiro.',
     },
     diagram: 'lia-avatar.webp',
     tech: ['Agentes de IA', 'Processamento de linguagem natural'],
