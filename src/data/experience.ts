@@ -54,7 +54,7 @@ export const experience: ExperienceEntry[] = [
     end: null,
     bullets: [
       { pt: 'Liderança no desenvolvimento de soluções baseadas em Inteligência Artificial e automação', en: 'Leadership in developing AI- and automation-based solutions' },
-      { pt: 'Arquitetura de software e soluções digitais escaláveis, incluindo a plataforma SmartProd', en: 'Software architecture and scalable digital solutions, including the SmartProd platform' },
+      { pt: 'Arquitetura de software e desenvolvimento de soluções digitais, incluindo a plataforma SmartProd', en: 'Software architecture and digital solutions development, including the SmartProd platform' },
       { pt: 'Integração de tecnologias de IA em processos e fluxos corporativos', en: 'Integration of AI technologies into business processes and workflows' },
     ],
   },

@@ -33,7 +33,7 @@ export const ui = {
     'home.areas.title': 'Áreas de atuação',
     'home.featured.title': 'Em destaque',
     'home.featured.sub': 'Doutorado, publicações recentes e a Arquitetura 6C.',
-    'home.results.kicker': 'Pesquisa aplicada, em resultados',
+    'home.results.kicker': 'Da pesquisa à aplicação',
     'home.results.title': 'Estudo de caso: SmartProd',
     'home.results.sub': 'Resultados do estudo de caso publicado no artigo apresentado no ENEGEP 2026.',
     'home.results.stat1.value': '−57%',
@@ -49,8 +49,8 @@ export const ui = {
     'research.kicker': 'Produção científica',
     'research.title': 'Pesquisa',
     'research.intro':
-      'Teses, dissertação e artigos publicados em conferências nacionais e internacionais, com foco em arquiteturas de IA Industrial, aprendizado de máquina aplicado e otimização para planejamento da produção.',
-    'research.theses': 'Teses e dissertação',
+      'Tese de doutorado, dissertação de mestrado e artigos científicos publicados em conferências nacionais e internacionais, com foco em arquiteturas de IA Industrial, aprendizado de máquina aplicado e otimização para planejamento da produção.',
+    'research.theses': 'Tese e dissertação',
     'research.papers': 'Artigos publicados',
     'research.links': 'Perfis acadêmicos',
     'research.doi': 'DOI',
@@ -73,7 +73,7 @@ export const ui = {
     'projects.kicker': 'Portfólio',
     'projects.title': 'Projetos',
     'projects.intro':
-      'Projetos de pesquisa aplicada e desenvolvimento de sistemas de IA em contextos industriais reais.',
+      'Pesquisa aplicada, sistemas de IA industrial, agentes inteligentes e iniciativas próprias que conectam ciência, tecnologia e as pessoas que ela serve.',
     'projects.role': 'Papel',
     'projects.tech': 'Tecnologias',
     'projects.back': 'Voltar a projetos',
@@ -91,7 +91,7 @@ export const ui = {
     'contact.kicker': 'Vamos conversar',
     'contact.title': 'Contato',
     'contact.intro':
-      'Aberta a colaborações científicas, projetos de pesquisa aplicada, parcerias de PD&I, convites para palestras e oportunidades acadêmicas e industriais.',
+      'Para colaborações científicas, projetos de pesquisa e inovação, parcerias de PD&I ou convites para palestras, entre em contato pelos canais abaixo.',
     'contact.email': 'E-mail',
 
     'lang.switch': 'EN',
@@ -123,7 +123,7 @@ export const ui = {
     'home.areas.title': 'Areas of focus',
     'home.featured.title': 'Featured',
     'home.featured.sub': 'Doctorate, recent publications, and the 6C Architecture.',
-    'home.results.kicker': 'Applied research, in results',
+    'home.results.kicker': 'From research to application',
     'home.results.title': 'Case study: SmartProd',
     'home.results.sub': 'Results from the case study published in the paper presented at ENEGEP 2026.',
     'home.results.stat1.value': '−57%',
@@ -139,8 +139,8 @@ export const ui = {
     'research.kicker': 'Scientific output',
     'research.title': 'Research',
     'research.intro':
-      'Theses, dissertation, and papers published at national and international conferences, focused on Industrial AI architectures, applied machine learning, and optimization for production planning.',
-    'research.theses': 'Theses and dissertation',
+      'PhD thesis, master’s dissertation, and scientific papers published at national and international conferences, focused on Industrial AI architectures, applied machine learning, and optimization for production planning.',
+    'research.theses': 'Thesis and dissertation',
     'research.papers': 'Published papers',
     'research.links': 'Academic profiles',
     'research.doi': 'DOI',
@@ -162,7 +162,8 @@ export const ui = {
 
     'projects.kicker': 'Portfolio',
     'projects.title': 'Projects',
-    'projects.intro': 'Applied research projects and AI systems development in real industrial contexts.',
+    'projects.intro':
+      'Applied research, industrial AI systems, intelligent agents, and personal ventures connecting science, technology, and the people it serves.',
     'projects.role': 'Role',
     'projects.tech': 'Technologies',
     'projects.back': 'Back to projects',
@@ -180,7 +181,7 @@ export const ui = {
     'contact.kicker': "Let's talk",
     'contact.title': 'Contact',
     'contact.intro':
-      'Open to scientific collaborations, applied research projects, R&D&I partnerships, speaking invitations, and academic and industrial opportunities.',
+      'For scientific collaborations, research and innovation projects, R&D&I partnerships, or speaking invitations, reach out through the channels below.',
     'contact.email': 'Email',
 
     'lang.switch': 'PT',

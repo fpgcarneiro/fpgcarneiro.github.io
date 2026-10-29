@@ -34,7 +34,7 @@ export const speaking: SpeakingEntry[] = [
       pt: 'Case de sucesso em previsão de demanda com IA',
       en: 'AI demand forecasting success case',
     },
-    date: '2024-01-01',
+    date: '2024',
     location: 'São Paulo, SP, Brasil',
     description: {
       pt: 'Apresentação de um case de sucesso sobre previsão de demanda com séries temporais e redes neurais em uma indústria automotiva, um dos três estudos de caso que validam a Arquitetura 6C na tese de doutorado.',

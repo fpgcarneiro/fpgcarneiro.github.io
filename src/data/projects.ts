@@ -205,8 +205,8 @@ export const projects: ProjectEntry[] = [
       en: 'An AI agent Fernanda developed for productivity and professional outreach.',
     },
     overview: {
-      pt: 'A LIA é uma agente de Inteligência Artificial desenvolvida por Fernanda Guidotti Carneiro para explorar a automação inteligente de atividades pessoais e profissionais. Reúne duas frentes: apoio à produtividade e à gestão do tempo, e atendimento inicial a pessoas interessadas em soluções e serviços tecnológicos.',
-      en: 'LIA is an AI agent Fernanda Guidotti Carneiro developed to explore the intelligent automation of personal and professional activities. It brings together two fronts: support for productivity and time management, and first-contact outreach for people interested in technology solutions and services.',
+      pt: 'A LIA é uma agente de Inteligência Artificial desenvolvida por Fernanda Guidotti Carneiro para apoiar atividades pessoais e profissionais, reunindo recursos de organização, gestão do tempo e atendimento inicial de contatos.',
+      en: 'LIA is an AI agent Fernanda Guidotti Carneiro built to support personal and professional activities, combining organization, time management, and initial contact outreach.',
     },
     challenge: {
       pt: 'Administrar o tempo vai além de organizar uma agenda. Envolve reconhecer prioridades, acompanhar responsabilidades e abrir espaço para o que realmente precisa de atenção. Ao mesmo tempo, o relacionamento profissional pede disponibilidade para ouvir, compreender demandas e identificar como o conhecimento e a experiência podem ajudar a resolver um problema. A LIA nasceu para aproximar essas duas necessidades.',
@@ -240,12 +240,12 @@ export const projects: ProjectEntry[] = [
       en: 'Ideation, development, and implementation by Fernanda, applying her experience in Artificial Intelligence, software architecture, and process automation.',
     },
     relevance: {
-      pt: 'A LIA expressa uma visão de Inteligência Artificial que vai além da automação de tarefas: uma tecnologia capaz de ajudar a organizar o tempo, compreender necessidades e facilitar conexões relevantes.',
-      en: 'LIA expresses a vision of Artificial Intelligence that goes beyond automating tasks: technology that helps organize time, understand needs, and make relevant connections.',
+      pt: 'Na mesma assistente, a LIA passava de uma lista de tarefas do dia para uma conversa com alguém buscando uma consultoria, sem perder o fio entre as duas coisas: era essa integração entre organização pessoal e relacionamento profissional que sustentava o projeto.',
+      en: 'In the same assistant, LIA could move from a daily to-do list to a conversation with someone looking for a consultation, without losing the thread between the two: that integration of personal organization and professional relationships was what the project was built on.',
     },
     caution: {
-      pt: 'Projeto autoral, desenvolvido e testado por Fernanda. Não chegou a ser comercializado.',
-      en: 'Author’s project, developed and tested by Fernanda. It was never commercialized.',
+      pt: 'Projeto autoral de Fernanda, desenvolvido e testado, sem fins comerciais.',
+      en: 'Fernanda’s own project, developed and tested, not commercialized.',
     },
     diagram: 'lia-avatar.webp',
     tech: ['Agentes de IA', 'Processamento de linguagem natural'],
@@ -271,8 +271,8 @@ export const projects: ProjectEntry[] = [
       en: 'Adopting AI shouldn’t start with picking a tool. Before that, it takes understanding the business’s processes, recognizing repetitive tasks, and assessing where the technology genuinely helps.',
     },
     methodology: {
-      pt: 'Método das Três Tarefas: listar o que se repete toda semana na empresa, e filtrar cada tarefa por três perguntas — ela se repete? é feita com texto ou informação? um erro nela é fácil de conferir? — para chegar a três tarefas prontas para receber IA, começando pela primeira já testada no intensivo.',
-      en: 'The Three Tasks Method: list what repeats every week in the business, then filter each task through three questions — does it repeat? is it done with text or information? is an error in it easy to check? — to arrive at three tasks ready for AI, starting with the first one tested live in the workshop.',
+      pt: 'O Método das Três Tarefas orienta a identificação de atividades recorrentes que podem se beneficiar da Inteligência Artificial. A partir de critérios simples, como frequência, tipo de informação utilizada e facilidade de conferência dos resultados, os participantes selecionam três oportunidades para uma primeira avaliação prática, testando a primeira delas ainda durante o intensivo.',
+      en: 'The Three Tasks Method guides the identification of recurring activities that could benefit from Artificial Intelligence. Using simple criteria, such as how often a task repeats, what kind of information it involves, and how easy its results are to check, participants select three opportunities for a first practical evaluation, testing the first one live during the workshop.',
     },
     contribution: {
       pt: 'Criação do método, estruturação do conteúdo e condução do intensivo, conectada à experiência com pesquisa aplicada e desenvolvimento de soluções de IA na MaximizaIA.',
@@ -294,8 +294,8 @@ export const projects: ProjectEntry[] = [
       en: 'A personal project, created with her husband, to make life easier for neurodivergent people.',
     },
     overview: {
-      pt: 'Pessoas neurodivergentes têm necessidades diferentes de atenção, organização e experiência sensorial no dia a dia. O Meu Tato é uma iniciativa empreendedora de Fernanda com o esposo, voltada a produtos sensoriais e a soluções tecnológicas que considerem essas necessidades, reunindo desenvolvimento de produtos físicos, fabricação digital e exploração de soluções digitais.',
-      en: 'Neurodivergent people have different everyday needs around attention, organization, and sensory experience. Meu Tato is an entrepreneurial venture by Fernanda and her husband, focused on sensory products and technology solutions that account for those needs, combining physical product development, digital fabrication, and digital solutions.',
+      pt: 'O Meu Tato é uma iniciativa empreendedora criada por Fernanda Guidotti Carneiro e seu esposo, que reúne desenvolvimento de produtos sensoriais e fabricação digital. O projeto nasceu do interesse em criar produtos que considerem diferentes experiências sensoriais e necessidades do cotidiano, que variam de pessoa para pessoa entre perfis neurodivergentes, combinando funcionalidade, criatividade e desenvolvimento de soluções próprias.',
+      en: 'Meu Tato is an entrepreneurial venture created by Fernanda Guidotti Carneiro and her husband, bringing together sensory product development and digital fabrication. The project grew out of an interest in creating products that account for different sensory experiences and everyday needs, which vary from person to person among neurodivergent profiles, combining functionality, creativity, and developing their own solutions.',
     },
     solution: {
       pt: 'O Meu Tato reúne criatividade, fabricação digital e desenvolvimento de produtos sensoriais, com foco em experiência de uso, acessibilidade e necessidades do cotidiano. Já conta com produtos sensoriais desenvolvidos e comercializados, incluindo itens de fabricação digital, e tem em desenvolvimento um aplicativo para apoiar foco, produtividade e organização do dia a dia. Os produtos são voltados ao conforto e à rotina, sem substituir acompanhamento profissional.',
