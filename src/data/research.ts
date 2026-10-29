@@ -139,5 +139,5 @@ export const academicLinks = {
   orcid: 'https://orcid.org/0000-0001-5913-9371',
   github: 'https://github.com/fpgcarneiro',
   linkedin: 'https://www.linkedin.com/in/fernandaguidotticarneiro/',
-  email: 'carneiro.guidotti@gmail.com',
+  email: 'guidotti@alumni.usp.br',
 };
