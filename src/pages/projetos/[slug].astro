@@ -7,6 +7,7 @@ import { projects } from '../../data/projects';
 import overview from '../../assets/diagrams/6c-overview.png';
 import caseSmartprod from '../../assets/diagrams/case-smartprod.png';
 import vitaLogo from '../../assets/diagrams/vita-logo.webp';
+import liaAvatar from '../../assets/diagrams/lia-avatar.webp';
 
 export function getStaticPaths() {
   return projects.map((project) => ({
@@ -19,6 +20,7 @@ const diagramMap: Record<string, ImageMetadata> = {
   '6c-overview.png': overview,
   'case-smartprod.png': caseSmartprod,
   'vita-logo.webp': vitaLogo,
+  'lia-avatar.webp': liaAvatar,
 };
 
 const { project } = Astro.props;

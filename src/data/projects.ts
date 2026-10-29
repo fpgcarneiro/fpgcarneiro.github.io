@@ -201,52 +201,53 @@ export const projects: ProjectEntry[] = [
       en: 'An intelligent agent to organize routines, understand needs, and connect opportunities.',
     },
     summary: {
-      pt: 'Agente pessoal de Inteligência Artificial, projeto autoral de Fernanda, para produtividade e relacionamento profissional.',
-      en: 'A personal AI agent, Fernanda’s own project, for productivity and professional relationships.',
+      pt: 'Agente de Inteligência Artificial desenvolvida por Fernanda para produtividade e atendimento profissional.',
+      en: 'An AI agent Fernanda developed for productivity and professional outreach.',
     },
     overview: {
-      pt: 'A LIA é um projeto autoral de Fernanda Guidotti Carneiro, concebido para explorar como agentes de Inteligência Artificial podem contribuir para uma gestão mais inteligente do tempo, das atividades e dos relacionamentos profissionais. A iniciativa surgiu da necessidade de conciliar diferentes responsabilidades, organizar prioridades e oferecer uma experiência mais personalizada a quem procura orientação ou soluções tecnológicas. Sua proposta integra duas frentes complementares: a produtividade pessoal e a gestão inteligente de oportunidades, usando Inteligência Artificial para facilitar interações, compreender contextos e apoiar decisões.',
-      en: 'LIA is Fernanda Guidotti Carneiro’s own project, created to explore how AI agents can contribute to smarter management of time, activities, and professional relationships. The idea grew out of the need to balance different responsibilities, organize priorities, and offer a more personal experience to people looking for guidance or technology solutions. Its proposal brings together two complementary fronts: personal productivity and intelligent opportunity management, using Artificial Intelligence to ease interactions, understand context, and support decisions.',
+      pt: 'A LIA é uma agente de Inteligência Artificial desenvolvida por Fernanda Guidotti Carneiro para explorar a automação inteligente de atividades pessoais e profissionais. Reúne duas frentes: apoio à produtividade e à gestão do tempo, e atendimento inicial a pessoas interessadas em soluções e serviços tecnológicos.',
+      en: 'LIA is an AI agent Fernanda Guidotti Carneiro developed to explore the intelligent automation of personal and professional activities. It brings together two fronts: support for productivity and time management, and first-contact outreach for people interested in technology solutions and services.',
     },
     challenge: {
-      pt: 'Administrar o tempo vai além de organizar uma agenda. Envolve reconhecer prioridades, acompanhar responsabilidades e abrir espaço para o que realmente precisa de atenção. Ao mesmo tempo, o relacionamento profissional pede disponibilidade para ouvir, compreender demandas e identificar como o conhecimento e a experiência podem ajudar a resolver um problema. A LIA nasce para aproximar essas duas necessidades.',
-      en: 'Managing time goes beyond organizing a calendar. It means recognizing priorities, keeping track of responsibilities, and making room for what truly needs attention. At the same time, professional relationships call for listening, understanding requests, and figuring out how knowledge and experience can help solve a problem. LIA exists to bring these two needs together.',
+      pt: 'Administrar o tempo vai além de organizar uma agenda. Envolve reconhecer prioridades, acompanhar responsabilidades e abrir espaço para o que realmente precisa de atenção. Ao mesmo tempo, o relacionamento profissional pede disponibilidade para ouvir, compreender demandas e identificar como o conhecimento e a experiência podem ajudar a resolver um problema. A LIA nasceu para aproximar essas duas necessidades.',
+      en: 'Managing time goes beyond organizing a calendar. It means recognizing priorities, keeping track of responsibilities, and making room for what truly needs attention. At the same time, professional relationships call for listening, understanding requests, and figuring out how knowledge and experience can help solve a problem. LIA was built to bring these two needs together.',
     },
     extraSections: [
       {
         heading: { pt: 'Produtividade e gestão do tempo', en: 'Productivity and time management' },
         body: {
-          pt: 'Nesta frente, a LIA apoia o planejamento de atividades, a organização de compromissos e a definição de prioridades. A proposta é usar interações em linguagem natural para facilitar o acompanhamento de objetivos e a organização do cotidiano, com uma gestão de tempo mais contextualizada e consciente.',
-          en: 'On this front, LIA supports planning activities, organizing commitments, and setting priorities. The idea is to use natural-language interaction to make it easier to track goals and organize day-to-day life, with a more contextual, conscious approach to time.',
+          pt: 'Nesta frente, a LIA apoiava o planejamento de atividades, a organização de compromissos e a definição de prioridades, por meio de interações em linguagem natural que facilitavam o acompanhamento de objetivos e a organização do cotidiano.',
+          en: 'On this front, LIA supported planning activities, organizing commitments, and setting priorities, through natural-language interactions that made it easier to track goals and organize day-to-day life.',
         },
       },
       {
         heading: { pt: 'Relacionamento e oportunidades', en: 'Relationships and opportunities' },
         body: {
-          pt: 'A segunda frente da LIA está em como pessoas e necessidades se conectam ao conhecimento e às soluções disponíveis. Ao receber um contato profissional, a agente apoia o primeiro atendimento, compreende o contexto da demanda e identifica possibilidades de colaboração, como consultoria especializada, formação, desenvolvimento de software, serviços tecnológicos e projetos de Inteligência Artificial. A ideia é tornar esse primeiro contato mais organizado e significativo.',
-          en: 'LIA’s second front is about how people and needs connect to available knowledge and solutions. When a professional contact comes in, the agent supports that first interaction, understands the context of the request, and identifies possibilities for collaboration, such as specialized consulting, training, software development, technology services, and AI projects. The idea is to make that first contact more organized and meaningful.',
+          pt: 'Na segunda frente, a LIA realizava o primeiro atendimento de pessoas que entravam em contato profissionalmente com Fernanda: compreendia a demanda, identificava o contexto e apontava possibilidades de colaboração, como consultoria especializada, formação, desenvolvimento de software, serviços tecnológicos e projetos de Inteligência Artificial.',
+          en: 'On the second front, LIA handled the first contact with people reaching out to Fernanda professionally: it understood the request, identified the context, and flagged possibilities for collaboration, such as specialized consulting, training, software development, technology services, and AI projects.',
         },
       },
       {
         heading: { pt: 'Concepção e arquitetura', en: 'Concept and architecture' },
         body: {
-          pt: 'A LIA reúne conceitos de agentes inteligentes, processamento de linguagem natural e automação de processos numa proposta de assistência pessoal e profissional. Sua arquitetura conceitual tem dois eixos, organização pessoal e relacionamento profissional, articulados por mecanismos de compreensão de linguagem natural e apoio à decisão, com atenção a privacidade, transparência e supervisão humana nas interações com outras pessoas.',
-          en: 'LIA brings together concepts from intelligent agents, natural language processing, and process automation into a proposal for personal and professional assistance. Its conceptual architecture has two axes, personal organization and professional relationships, connected by natural-language understanding and decision support, with attention to privacy, transparency, and human oversight in interactions with other people.',
+          pt: 'A LIA reúne agentes inteligentes, processamento de linguagem natural e automação de processos numa única assistente pessoal e profissional, com atenção a privacidade, transparência e supervisão humana nas interações com outras pessoas.',
+          en: 'LIA brings together intelligent agents, natural language processing, and process automation into a single personal and professional assistant, with attention to privacy, transparency, and human oversight in interactions with other people.',
         },
       },
     ],
     contribution: {
-      pt: 'A LIA é uma iniciativa independente, idealizada por Fernanda, que reúne sua experiência em Inteligência Artificial, arquitetura de software e desenvolvimento de soluções inteligentes.',
-      en: 'LIA is an independent initiative, conceived by Fernanda, drawing on her experience in Artificial Intelligence, software architecture, and intelligent solutions development.',
+      pt: 'Idealização, desenvolvimento e implementação do projeto por Fernanda, aplicando sua experiência em Inteligência Artificial, arquitetura de software e automação de processos.',
+      en: 'Ideation, development, and implementation by Fernanda, applying her experience in Artificial Intelligence, software architecture, and process automation.',
     },
     relevance: {
       pt: 'A LIA expressa uma visão de Inteligência Artificial que vai além da automação de tarefas: uma tecnologia capaz de ajudar a organizar o tempo, compreender necessidades e facilitar conexões relevantes.',
       en: 'LIA expresses a vision of Artificial Intelligence that goes beyond automating tasks: technology that helps organize time, understand needs, and make relevant connections.',
     },
     caution: {
-      pt: 'Status: projeto autoral em desenvolvimento. As funcionalidades descritas são a proposta do projeto e serão identificadas como implementadas apenas quando confirmadas.',
-      en: 'Status: author’s project in development. The features described are the project’s proposal and will be identified as implemented only once confirmed.',
+      pt: 'Projeto autoral, desenvolvido e testado por Fernanda. Não chegou a ser comercializado.',
+      en: 'Author’s project, developed and tested by Fernanda. It was never commercialized.',
     },
+    diagram: 'lia-avatar.webp',
     tech: ['Agentes de IA', 'Processamento de linguagem natural'],
   },
   {
