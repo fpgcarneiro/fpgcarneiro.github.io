@@ -98,7 +98,7 @@ export const experience: ExperienceEntry[] = [
   {
     slug: 'centro-paula-souza-araraquara',
     org: 'Centro Estadual de Educação Tecnológica Paula Souza',
-    role: { pt: 'Docente de informática', en: 'Computing Lecturer' },
+    role: { pt: 'Docente', en: 'Lecturer' },
     location: 'Araraquara, SP, Brasil',
     start: '2008-02',
     end: '2010-02',

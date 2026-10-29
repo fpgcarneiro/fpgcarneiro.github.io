@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { alternatePath, type Lang } from '../i18n/utils';
+import { academicLinks } from '../data/research';
 
 interface Props {
   lang: Lang;
@@ -19,6 +20,24 @@ const ogImage = image ?? `${siteUrl}/og-default.png`;
 const fullTitle = `${title} — Fernanda Guidotti Carneiro`;
 const ptHref = new URL(alternatePath('pt', path), siteUrl).toString();
 const enHref = new URL(alternatePath('en', path), siteUrl).toString();
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Fernanda Guidotti Carneiro',
+  alternateName: 'Fernanda Pereira Guidotti Carneiro',
+  url: siteUrl,
+  image: `${siteUrl}/og-default.png`,
+  jobTitle: lang === 'pt' ? 'Pesquisadora em Inteligência Artificial Industrial' : 'Industrial AI Researcher',
+  affiliation: [
+    { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo (USP/ICMC)' },
+    { '@type': 'Organization', name: 'FATEC Catanduva' },
+    { '@type': 'Organization', name: 'MaximizaIA' },
+  ],
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo (USP/ICMC)' },
+  sameAs: [academicLinks.linkedin, academicLinks.scholar, academicLinks.orcid, academicLinks.lattes, academicLinks.github],
+  email: `mailto:${academicLinks.email}`,
+};
 ---
 
 <!doctype html>
@@ -54,6 +73,8 @@ const enHref = new URL(alternatePath('en', path), siteUrl).toString();
       href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 
     <script is:inline>
       const stored = localStorage.getItem('theme');

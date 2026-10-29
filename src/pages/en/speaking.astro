@@ -5,12 +5,16 @@ import Kicker from '../../components/Kicker.astro';
 import { useTranslations } from '../../i18n/utils';
 import { speaking } from '../../data/speaking';
 import enegepPhoto from '../../assets/photos/source/fernanda-speaking-enegep-2026.jpg';
+import mulheresPhoto from '../../assets/photos/source/fernanda-mulheres-empreendedoras-stage.jpg';
+import ifrsPhoto from '../../assets/photos/source/fernanda-ifrs-presenting.jpg';
 
 const lang = 'en' as const;
 const t = useTranslations(lang);
 
 const images: Record<string, ImageMetadata> = {
   'fernanda-speaking-enegep-2026.jpg': enegepPhoto,
+  'fernanda-mulheres-empreendedoras-stage.jpg': mulheresPhoto,
+  'fernanda-ifrs-presenting.jpg': ifrsPhoto,
 };
 ---
 
@@ -30,7 +34,7 @@ const images: Record<string, ImageMetadata> = {
     </p>
 
     <div class="mt-12 space-y-12">
-      {speaking.map((entry) => (
+      {[...speaking].sort((a, b) => b.date.localeCompare(a.date)).map((entry) => (
         <article class="grid gap-6 sm:grid-cols-[1.1fr_0.9fr] sm:items-center">
           {entry.image && (
             <div class="overflow-hidden rounded-2xl border border-[var(--color-line)] dark:border-[var(--color-line-dark)]">
