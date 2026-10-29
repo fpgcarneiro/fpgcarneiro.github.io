@@ -119,9 +119,10 @@ export const projects: ProjectEntry[] = [
       en: 'Visionary Industrial Technology Architecture: the technical structure that materializes the 6C Architecture into software components.',
     },
     overview: {
-      pt: 'Uma arquitetura de referência precisa se relacionar com decisões concretas de engenharia de software para orientar aplicações reais. A Plataforma VITA (Visionary Industrial Technology Architecture) organiza os componentes, mecanismos analíticos e fluxos operacionais que materializam os princípios da Arquitetura 6C.',
-      en: 'A reference architecture needs to connect to concrete software engineering decisions in order to guide real applications. The VITA Platform (Visionary Industrial Technology Architecture) organizes the components, analytical mechanisms, and operational flows that materialize the 6C Architecture’s principles.',
+      pt: 'Uma arquitetura de referência precisa se relacionar com decisões concretas de engenharia de software para orientar aplicações reais. A Plataforma VITA (Visionary Industrial Technology Architecture) organiza os componentes, mecanismos analíticos e fluxos operacionais que materializam os princípios da Arquitetura 6C. O nome é uma homenagem à mãe de Fernanda, Vita.',
+      en: 'A reference architecture needs to connect to concrete software engineering decisions in order to guide real applications. The VITA Platform (Visionary Industrial Technology Architecture) organizes the components, analytical mechanisms, and operational flows that materialize the 6C Architecture’s principles. The name is a tribute to Fernanda’s mother, Vita.',
     },
+    diagram: 'vita-logo.webp',
     challenge: {
       pt: 'Sistemas industriais costumam combinar equipamentos, sensores, bancos de dados e plataformas corporativas (ERP, MES) construídos em tecnologias diferentes. Essa heterogeneidade exige mecanismos claros de integração, modularidade e manutenção, que a VITA aborda a partir da organização dos componentes de software e de suas responsabilidades.',
       en: 'Industrial systems typically combine equipment, sensors, databases, and corporate platforms (ERP, MES) built on different technologies. This heterogeneity requires clear mechanisms for integration, modularity, and maintenance, which VITA addresses by organizing software components and their responsibilities.',
