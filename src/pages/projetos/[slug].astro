@@ -54,9 +54,15 @@ const sections: { heading: string; body: string }[] = [
     <p class="mt-2 text-lg text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">{project.subtitle.pt}</p>
 
     {project.diagram && diagramMap[project.diagram] && (
-      <div class="mt-8 overflow-hidden rounded-2xl border border-[var(--color-line)] dark:border-[var(--color-line-dark)]">
-        <Image src={diagramMap[project.diagram]} alt={project.title.pt} width={1100} class="w-full bg-white" />
-      </div>
+      project.diagram === 'lia-avatar.webp' ? (
+        <div class="mt-8 w-40 overflow-hidden rounded-2xl border border-[var(--color-line)] shadow-sm dark:border-[var(--color-line-dark)]">
+          <Image src={diagramMap[project.diagram]} alt={project.title.pt} width={240} class="w-full object-cover" />
+        </div>
+      ) : (
+        <div class="mt-8 overflow-hidden rounded-2xl border border-[var(--color-line)] dark:border-[var(--color-line-dark)]">
+          <Image src={diagramMap[project.diagram]} alt={project.title.pt} width={1100} class="w-full bg-white" />
+        </div>
+      )
     )}
 
     <div class="prose-measure mt-8 space-y-6 text-[0.98rem] leading-relaxed text-[var(--color-ink-soft)] dark:text-[var(--color-ink-dark-soft)]">
