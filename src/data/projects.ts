@@ -97,8 +97,8 @@ export const projects: ProjectEntry[] = [
       en: 'Technical leadership of the development, as partner and AI specialist at MaximizaIA: system architecture, integration between the optimization and generative AI components, and definition of the technology stack.',
     },
     results: {
-      pt: 'No estudo de caso publicado no ENEGEP 2026, o plano otimizado pelo SmartProd, comparado ao plano em execução: reduziu o tempo total de setup de 92,8h para 40,3h (−56,6%); eliminou as 3 ordens em atraso do cenário (0 atrasos); e reduziu a espera média de entrega de 11,3 para 10,0 dias. Esses números são do estudo de caso documentado no artigo, não uma média de desempenho do sistema em geral.',
-      en: 'In the case study published at ENEGEP 2026, the SmartProd-optimized plan, compared to the plan in execution: cut total setup time from 92.8h to 40.3h (−56.6%); eliminated the scenario’s 3 delayed orders (0 delays); and reduced average delivery wait time from 11.3 to 10.0 days. These numbers come from the documented case study in the paper, not an average performance figure for the system in general.',
+      pt: 'No estudo de caso publicado no ENEGEP 2026, a aplicação do SmartProd reduziu o tempo total de setup em 56,6% (de 92,8h para 40,3h), eliminou os três atrasos identificados no cenário analisado e reduziu a espera média de entrega de 11,3 para 10,0 dias. Os indicadores correspondem às condições específicas do experimento apresentado no artigo.',
+      en: 'In the case study published at ENEGEP 2026, applying SmartProd cut total setup time by 56.6% (from 92.8h to 40.3h), eliminated the three delays identified in the scenario analyzed, and reduced average delivery wait time from 11.3 to 10.0 days. These indicators correspond to the specific conditions of the experiment presented in the paper.',
     },
     tech: ['Algoritmos genéticos', 'Gêmeo digital', 'LLMs', 'Otimização', 'MLOps'],
     diagram: 'case-smartprod.png',
@@ -137,9 +137,9 @@ export const projects: ProjectEntry[] = [
       pt: 'Concepção e desenvolvimento, no contexto da pesquisa de doutorado e de sua aplicação industrial, como a estrutura técnica que conecta os princípios da Arquitetura 6C à engenharia de sistemas de IA industrial.',
       en: 'Design and development, in the context of the PhD research and its industrial application, as the technical structure connecting the 6C Architecture’s principles to industrial AI systems engineering.',
     },
-    caution: {
-      pt: 'A VITA é apresentada aqui como estrutura conceitual e técnica de referência; esta página não afirma benefícios de desempenho comprovados sem métricas que os sustentem.',
-      en: 'VITA is presented here as a conceptual and technical reference structure; this page does not claim proven performance benefits without metrics to support them.',
+    relevance: {
+      pt: 'A VITA estabelece uma estrutura tecnológica para organizar componentes de software, mecanismos de integração e recursos de Inteligência Artificial a partir dos princípios da Arquitetura 6C, aproximando a pesquisa arquitetural de suas possibilidades de implementação. Parte dos componentes está prototipada; outros permanecem como especificação arquitetural, a ser detalhada em trabalhos futuros.',
+      en: 'VITA establishes a technology structure for organizing software components, integration mechanisms, and AI capabilities based on the 6C Architecture’s principles, bringing the architectural research closer to its implementation possibilities. Some components are prototyped; others remain an architectural specification, to be detailed in future work.',
     },
     tech: ['Microsserviços', 'APIs', 'MLOps'],
     links: [{ label: { pt: 'GitHub', en: 'GitHub' }, href: 'https://github.com/fpgcarneiro/vita' }],
@@ -297,8 +297,8 @@ export const projects: ProjectEntry[] = [
       en: 'Neurodivergent people have different everyday needs around attention, organization, and sensory experience. Meu Tato is an entrepreneurial venture by Fernanda and her husband, focused on sensory products and technology solutions that account for those needs, combining physical product development, digital fabrication, and digital solutions.',
     },
     solution: {
-      pt: 'Duas frentes: produtos sensoriais, já desenvolvidos e comercializados, incluindo itens de fabricação digital; e um aplicativo em desenvolvimento, voltado a apoiar foco, produtividade e organização cotidiana.',
-      en: 'Two fronts: sensory products, already developed and sold, including digitally fabricated items; and an app in development, aimed at supporting focus, productivity, and daily organization.',
+      pt: 'O Meu Tato reúne criatividade, fabricação digital e desenvolvimento de produtos sensoriais, com foco em experiência de uso, acessibilidade e necessidades do cotidiano. Já conta com produtos sensoriais desenvolvidos e comercializados, incluindo itens de fabricação digital, e tem em desenvolvimento um aplicativo para apoiar foco, produtividade e organização do dia a dia. Os produtos são voltados ao conforto e à rotina, sem substituir acompanhamento profissional.',
+      en: 'Meu Tato brings together creativity, digital fabrication, and sensory product development, focused on the user experience, accessibility, and everyday needs. It already has sensory products developed and sold, including digitally fabricated items, and has an app in development to support focus, productivity, and daily organization. The products are designed for comfort and routine, and don’t replace professional care.',
     },
     contribution: {
       pt: 'Cofundadora, ao lado do esposo, responsável pela concepção, desenvolvimento e gestão da iniciativa.',
@@ -307,10 +307,6 @@ export const projects: ProjectEntry[] = [
     relevance: {
       pt: 'Amplia sua atuação empreendedora para além das aplicações industriais de IA, aproximando tecnologia, desenvolvimento de produtos e necessidades humanas.',
       en: 'Extends her entrepreneurial work beyond industrial AI applications, bringing technology, product development, and human needs closer together.',
-    },
-    caution: {
-      pt: 'Os produtos Meu Tato não têm propriedades terapêuticas comprovadas nem substituem acompanhamento profissional.',
-      en: 'Meu Tato products have no proven therapeutic properties and do not replace professional care.',
     },
     tech: [],
     links: [{ label: { pt: 'Meu Tato', en: 'Meu Tato' }, href: 'https://meutato.com/' }],
